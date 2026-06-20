@@ -1,20 +1,11 @@
 'use client'
 
 import { useMemo } from 'react'
-import Image from 'next/image'
-import { movies, categories, getMood, matchScore } from '@/lib/catalog'
+import { movies, getMood, matchScore } from '@/lib/catalog'
 import { MoodIcon } from '@/components/mood-icon'
 import { Badge } from '@/components/ui/badge'
 import { Layers } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-
-function topGenres(attrs: Record<string, number>, n: number) {
-  return [...categories]
-    .map((c) => ({ label: c.label, value: attrs[c.id] ?? 0 }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, n)
-    .map((c) => c.label)
-}
 
 export function RecommendTab({
   activeMood,
@@ -33,6 +24,7 @@ export function RecommendTab({
     return [...movies]
       .map((m) => ({ movie: m, score: matchScore(stats, m) }))
       .sort((a, b) => b.score - a.score)
+      .slice(0, 40)
   }, [stats])
 
   const top = ranked[0]
@@ -66,13 +58,11 @@ export function RecommendTab({
       {/* Hero pick */}
       {top && (
         <article className="relative mt-5 aspect-[3/4] w-full overflow-hidden rounded-3xl border border-border">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={top.movie.cover || '/placeholder.svg'}
             alt={`${top.movie.title} poster`}
-            fill
-            sizes="(max-width: 480px) 100vw, 420px"
-            className="object-cover"
-            priority
+            className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
           <div className="absolute left-4 top-4">
@@ -98,12 +88,11 @@ export function RecommendTab({
             className="flex gap-3 rounded-2xl border border-border bg-card p-3"
           >
             <div className="relative h-24 w-16 shrink-0 overflow-hidden rounded-lg">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={movie.cover || '/placeholder.svg'}
                 alt={`${movie.title} poster`}
-                fill
-                sizes="64px"
-                className="object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
             <div className="flex min-w-0 flex-1 flex-col justify-center">
@@ -119,7 +108,7 @@ export function RecommendTab({
                 {movie.year}
               </p>
               <div className="mt-1.5 flex flex-wrap gap-1">
-                {topGenres(movie.attributes, 2).map((g) => (
+                {movie.genres.slice(0, 2).map((g) => (
                   <Badge key={g} variant="secondary" className="text-[11px]">
                     {g}
                   </Badge>

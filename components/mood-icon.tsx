@@ -1,20 +1,26 @@
 import {
   Brain,
-  Castle,
   Coffee,
-  Ghost,
   Heart,
-  Zap,
+  Laugh,
+  Pizza,
+  Skull,
+  Sparkles,
+  Sun,
+  Telescope,
   type LucideIcon,
 } from 'lucide-react'
 
 const ICONS: Record<string, LucideIcon> = {
-  tea: Coffee,
-  bolt: Zap,
-  brain: Brain,
-  ghost: Ghost,
-  castle: Castle,
+  sun: Sun,
+  laugh: Laugh,
+  coffee: Coffee,
   heart: Heart,
+  skull: Skull,
+  brain: Brain,
+  telescope: Telescope,
+  sparkles: Sparkles,
+  pizza: Pizza,
 }
 
 export function MoodIcon({

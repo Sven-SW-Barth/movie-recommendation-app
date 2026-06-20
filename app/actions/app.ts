@@ -28,7 +28,7 @@ export type UserState = {
   swipeCount: number
 }
 
-/** Ensure a settings row exists, returning it. */
+/** Ensure a settings row exists, returning it. Safe under concurrent calls. */
 async function ensureSettings(userId: string) {
   const existing = await db
     .select()
@@ -36,11 +36,21 @@ async function ensureSettings(userId: string) {
     .where(eq(userSettings.userId, userId))
     .limit(1)
   if (existing.length > 0) return existing[0]
+
   const inserted = await db
     .insert(userSettings)
     .values({ userId, onboarded: false })
+    .onConflictDoNothing()
     .returning()
-  return inserted[0]
+  if (inserted.length > 0) return inserted[0]
+
+  // Another concurrent request created it first — read it back.
+  const row = await db
+    .select()
+    .from(userSettings)
+    .where(eq(userSettings.userId, userId))
+    .limit(1)
+  return row[0]
 }
 
 /** Get or create the profile (stats) for a given mood. */
@@ -51,11 +61,23 @@ async function ensureProfile(userId: string, mood: string) {
     .where(and(eq(moodProfiles.userId, userId), eq(moodProfiles.mood, mood)))
     .limit(1)
   if (existing.length > 0) return existing[0]
+
   const inserted = await db
     .insert(moodProfiles)
     .values({ userId, mood, stats: presetFor(mood) })
+    .onConflictDoNothing({
+      target: [moodProfiles.userId, moodProfiles.mood],
+    })
     .returning()
-  return inserted[0]
+  if (inserted.length > 0) return inserted[0]
+
+  // Lost the race — another request created it first.
+  const row = await db
+    .select()
+    .from(moodProfiles)
+    .where(and(eq(moodProfiles.userId, userId), eq(moodProfiles.mood, mood)))
+    .limit(1)
+  return row[0]
 }
 
 /** Full state needed to render the app for the current user. */

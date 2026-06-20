@@ -1,26 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import {
   motion,
   useMotionValue,
   useTransform,
   type PanInfo,
 } from 'motion/react'
-import { categories, type Movie } from '@/lib/catalog'
+import { type Movie } from '@/lib/catalog'
 import { Heart, X } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 const SWIPE_THRESHOLD = 110
-
-function topGenres(movie: Movie, n: number) {
-  return [...categories]
-    .map((c) => ({ label: c.label, value: movie.attributes[c.id] ?? 0 }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, n)
-    .map((c) => c.label)
-}
 
 export function SwipeCard({
   movie,
@@ -60,13 +51,11 @@ export function SwipeCard({
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
       <div className="relative h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={movie.cover || '/placeholder.svg'}
           alt={`${movie.title} poster`}
-          fill
-          priority
-          sizes="(max-width: 480px) 100vw, 420px"
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           draggable={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
@@ -93,7 +82,7 @@ export function SwipeCard({
 
         <div className="absolute inset-x-0 bottom-0 p-5">
           <div className="flex flex-wrap gap-1.5">
-            {topGenres(movie, 3).map((g) => (
+            {movie.genres.slice(0, 3).map((g) => (
               <Badge
                 key={g}
                 variant="secondary"
