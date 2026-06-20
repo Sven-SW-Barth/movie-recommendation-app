@@ -116,30 +116,32 @@ export function AppShell({
 
   return (
     <div className="mx-auto min-h-svh w-full max-w-md bg-background">
-      <header className="sticky top-0 z-20 flex items-center justify-between border-b border-border bg-background/90 px-5 py-3 backdrop-blur">
-        <div className="flex items-center gap-2 text-primary">
-          <Clapperboard className="size-5" aria-hidden="true" />
-          <span className="font-display text-sm font-semibold uppercase tracking-widest">
-            Reel Mood
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-xs font-medium">
-            <MoodIcon
-              name={activeMoodMeta?.emoji ?? 'heart'}
-              className="size-3.5 text-primary"
-            />
-            {activeMoodMeta?.label}
-          </span>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 text-muted-foreground"
-            aria-label="Sign out"
-            onClick={handleSignOut}
-          >
-            <LogOut className="size-4" aria-hidden="true" />
-          </Button>
+      <header className="sticky top-0 z-20 border-b border-foreground bg-background/90 backdrop-blur">
+        <div className="flex items-center justify-between px-5 pb-2 pt-3">
+          <div className="flex items-center gap-2 text-primary">
+            <Clapperboard className="size-4" aria-hidden="true" />
+            <span className="font-display text-xl font-bold tracking-tight">
+              Reel Mood
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="flex items-center gap-1.5 border border-foreground px-2.5 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.16em]">
+              <MoodIcon
+                name={activeMoodMeta?.emoji ?? 'heart'}
+                className="size-3.5"
+              />
+              {activeMoodMeta?.label}
+            </span>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="size-8 rounded-none text-muted-foreground"
+              aria-label="Sign out"
+              onClick={handleSignOut}
+            >
+              <LogOut className="size-4" aria-hidden="true" />
+            </Button>
+          </div>
         </div>
       </header>
 

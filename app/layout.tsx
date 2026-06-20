@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono, Space_Grotesk } from 'next/font/google'
+import { Geist, Geist_Mono, Bodoni_Moda } from 'next/font/google'
 import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 
@@ -9,9 +9,12 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 })
-const spaceGrotesk = Space_Grotesk({
+// High-contrast didone serif for the bold editorial display type.
+const bodoni = Bodoni_Moda({
   variable: '--font-display',
   subsets: ['latin'],
+  style: ['normal', 'italic'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#ffffff',
+  themeColor: '#f6f3ec',
   userScalable: false,
   width: 'device-width',
   initialScale: 1,
@@ -55,7 +58,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} bg-background`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bodoni.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {children}

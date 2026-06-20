@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-display), var(--font-sans);
+  --font-heading: var(--font-display), Georgia, 'Times New Roman', serif;
   --font-sans: var(--font-geist-sans), 'Geist Fallback';
-  --font-display: var(--font-display), var(--font-geist-sans);
+  --font-display: var(--font-display), Georgia, 'Times New Roman', serif;
   --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -53,46 +53,47 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Clean, bold light theme. Crisp white surfaces, near-black ink for strong
-   contrast, a single near-black "bold" primary, plus functional like/dislike. */
+/* Bold editorial / arthaus theme. Warm paper background, near-black ink,
+   hairline rules, sharp corners, and high-contrast serif display type.
+   Functional like/dislike colors kept for the swipe controls. */
 :root {
   color-scheme: light;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0 0);
-  --primary: oklch(0.2 0 0);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0 0);
-  --secondary-foreground: oklch(0.2 0 0);
-  --muted: oklch(0.965 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.96 0 0);
-  --accent-foreground: oklch(0.2 0 0);
-  --destructive: oklch(0.58 0.22 25);
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.2 0 0);
-  --like: oklch(0.6 0.15 150);
-  --like-foreground: oklch(0.99 0 0);
-  --dislike: oklch(0.58 0.22 25);
-  --dislike-foreground: oklch(0.99 0 0);
-  --chart-1: oklch(0.2 0 0);
-  --chart-2: oklch(0.6 0.15 150);
-  --chart-3: oklch(0.58 0.22 25);
-  --chart-4: oklch(0.55 0.13 230);
-  --chart-5: oklch(0.62 0.16 60);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.99 0 0);
-  --sidebar-foreground: oklch(0.18 0 0);
-  --sidebar-primary: oklch(0.2 0 0);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.96 0 0);
-  --sidebar-accent-foreground: oklch(0.2 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.2 0 0);
+  --background: oklch(0.97 0.006 85);
+  --foreground: oklch(0.16 0.004 75);
+  --card: oklch(0.985 0.005 85);
+  --card-foreground: oklch(0.16 0.004 75);
+  --popover: oklch(0.985 0.005 85);
+  --popover-foreground: oklch(0.16 0.004 75);
+  --primary: oklch(0.16 0.004 75);
+  --primary-foreground: oklch(0.98 0.006 85);
+  --secondary: oklch(0.93 0.006 85);
+  --secondary-foreground: oklch(0.16 0.004 75);
+  --muted: oklch(0.93 0.006 85);
+  --muted-foreground: oklch(0.46 0.006 75);
+  --accent: oklch(0.91 0.008 85);
+  --accent-foreground: oklch(0.16 0.004 75);
+  --destructive: oklch(0.52 0.2 25);
+  --border: oklch(0.83 0.008 80);
+  --input: oklch(0.83 0.008 80);
+  --ring: oklch(0.16 0.004 75);
+  --like: oklch(0.55 0.14 150);
+  --like-foreground: oklch(0.98 0.006 85);
+  --dislike: oklch(0.52 0.2 25);
+  --dislike-foreground: oklch(0.98 0.006 85);
+  --chart-1: oklch(0.16 0.004 75);
+  --chart-2: oklch(0.55 0.14 150);
+  --chart-3: oklch(0.52 0.2 25);
+  --chart-4: oklch(0.5 0.12 230);
+  --chart-5: oklch(0.58 0.15 60);
+  --radius: 0.25rem;
+  --sidebar: oklch(0.985 0.005 85);
+  --sidebar-foreground: oklch(0.16 0.004 75);
+  --sidebar-primary: oklch(0.16 0.004 75);
+  --sidebar-primary-foreground: oklch(0.98 0.006 85);
+  --sidebar-accent: oklch(0.91 0.008 85);
+  --sidebar-accent-foreground: oklch(0.16 0.004 75);
+  --sidebar-border: oklch(0.83 0.008 80);
+  --sidebar-ring: oklch(0.16 0.004 75);
 }
 
 @layer base {
@@ -104,5 +105,21 @@
   }
   html {
     @apply font-sans;
+  }
+  /* Tight, high-contrast display headlines in the editorial serif. */
+  .font-display {
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  /* Small uppercase tracked sans label used as an editorial kicker/eyebrow. */
+  .eyebrow {
+    @apply font-sans text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground;
+  }
+  /* Oversized faint numeral used as an editorial layout accent. */
+  .index-numeral {
+    @apply font-display font-semibold leading-none tabular-nums;
+    font-variant-numeric: lining-nums tabular-nums;
   }
 }

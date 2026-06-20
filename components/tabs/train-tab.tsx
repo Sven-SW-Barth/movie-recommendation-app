@@ -41,28 +41,32 @@ export function TrainTab({
 
   return (
     <div className="flex flex-col px-5 pb-4">
-      <header className="pt-6">
-        <h1 className="font-display text-2xl font-bold">Train your taste</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Swipe right to like, left to skip. You&apos;re tuning the{' '}
-          <span className="font-medium text-primary">{mood?.label}</span>{' '}
-          profile.
+      <header className="border-b border-border pb-3 pt-6">
+        <div className="flex items-center justify-between">
+          <p className="eyebrow">The Screening Room</p>
+          <p className="eyebrow">{mood?.label}</p>
+        </div>
+        <h1 className="mt-2 font-display text-4xl font-bold leading-none">
+          Train your <span className="italic font-medium">taste</span>
+        </h1>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Swipe right for yes, left to pass. Each verdict tunes this profile.
         </p>
       </header>
 
       {done ? (
-        <div className="mt-10 flex flex-col items-center rounded-3xl border border-border bg-card p-8 text-center">
+        <div className="mt-8 flex flex-col items-center border border-foreground bg-card p-8 text-center">
           <CheckCircle2 className="size-10 text-like" aria-hidden="true" />
-          <h2 className="mt-3 font-display text-xl font-semibold">
-            All caught up
+          <h2 className="mt-3 font-display text-2xl font-bold">
+            That&apos;s a wrap
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            You&apos;ve rated every movie for this mood. Check your
-            recommendations, or reset to train again.
+            You&apos;ve reviewed every film for this mood. See your picks, or
+            reset the reel to train again.
           </p>
           <Button
-            variant="secondary"
-            className="mt-5"
+            variant="outline"
+            className="mt-5 rounded-none uppercase tracking-[0.14em]"
             onClick={onReset}
           >
             <RotateCcw className="size-4" aria-hidden="true" />
@@ -71,10 +75,10 @@ export function TrainTab({
         </div>
       ) : (
         <>
-          <div className="relative mx-auto mt-6 aspect-[2/3] w-full max-w-[340px]">
+          <div className="relative mx-auto mt-7 aspect-[2/3] w-full max-w-[340px]">
             {/* peek of next card */}
             {next ? (
-              <div className="absolute inset-0 scale-[0.94] translate-y-3 overflow-hidden rounded-3xl border border-border bg-card opacity-60">
+              <div className="absolute inset-0 translate-x-2 translate-y-2 overflow-hidden border border-foreground bg-card opacity-50">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={next.cover || '/placeholder.svg'}
@@ -94,13 +98,13 @@ export function TrainTab({
             />
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-6">
+          <div className="mt-8 flex items-center justify-center gap-6">
             <Button
               size="icon"
               variant="outline"
-              aria-label="Skip this movie"
+              aria-label="Pass on this movie"
               onClick={() => fire(false)}
-              className="size-16 rounded-full border-dislike/40 text-dislike hover:bg-dislike/10 hover:text-dislike"
+              className="size-16 rounded-none border-dislike text-dislike hover:bg-dislike hover:text-dislike-foreground"
             >
               <X className="size-7" aria-hidden="true" />
             </Button>
@@ -108,24 +112,27 @@ export function TrainTab({
               size="icon"
               aria-label="Like this movie"
               onClick={() => fire(true)}
-              className="size-16 rounded-full bg-like text-like-foreground hover:bg-like/90"
+              className="size-16 rounded-none bg-like text-like-foreground hover:bg-like/90"
             >
               <Heart className="size-7" aria-hidden="true" />
             </Button>
           </div>
 
-          <p className="mt-4 text-center text-xs text-muted-foreground">
-            {deck.length} {deck.length === 1 ? 'movie' : 'movies'} left ·{' '}
-            {swipedMovieIds.length} rated
+          <p className="mt-4 text-center text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+            {deck.length} {deck.length === 1 ? 'film' : 'films'} left ·{' '}
+            {swipedMovieIds.length} reviewed
           </p>
         </>
       )}
 
-      <section className="mt-8">
-        <h2 className="mb-3 font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Live preferences · {mood?.label}
-        </h2>
-        <StatsBars stats={stats} />
+      <section className="mt-10 border-t border-border pt-4">
+        <div className="flex items-center justify-between">
+          <h2 className="eyebrow">Live taste profile</h2>
+          <span className="eyebrow">{mood?.label}</span>
+        </div>
+        <div className="mt-4">
+          <StatsBars stats={stats} />
+        </div>
       </section>
     </div>
   )

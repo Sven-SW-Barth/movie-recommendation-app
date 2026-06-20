@@ -11,21 +11,21 @@ export function StatsBars({
   className?: string
 }) {
   return (
-    <ul className={cn('flex flex-col gap-3', className)}>
+    <ul className={cn('flex flex-col gap-3.5', className)}>
       {categories.map((cat) => {
         const value = Math.round((stats[cat.id] ?? 50) * 10) / 10
         return (
           <li key={cat.id} className="flex flex-col gap-1.5">
             <div className="flex items-baseline justify-between">
-              <span className="text-sm font-medium text-foreground">
+              <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-foreground">
                 {cat.label}
               </span>
-              <span className="font-mono text-xs tabular-nums text-muted-foreground">
+              <span className="index-numeral text-sm tabular-nums text-foreground">
                 {value.toFixed(1)}
               </span>
             </div>
             <div
-              className="h-2 w-full overflow-hidden rounded-full bg-secondary"
+              className="h-1.5 w-full overflow-hidden bg-secondary"
               role="progressbar"
               aria-valuenow={value}
               aria-valuemin={0}
@@ -33,7 +33,7 @@ export function StatsBars({
               aria-label={cat.label}
             >
               <div
-                className="h-full rounded-full bg-primary transition-[width] duration-500 ease-out"
+                className="h-full bg-primary transition-[width] duration-500 ease-out"
                 style={{ width: `${value}%` }}
               />
             </div>

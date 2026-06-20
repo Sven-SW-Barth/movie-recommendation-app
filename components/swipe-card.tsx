@@ -50,7 +50,7 @@ export function SwipeCard({
       animate={exitX !== 0 ? { x: exitX, opacity: 0 } : undefined}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
-      <div className="relative h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
+      <div className="relative h-full w-full overflow-hidden border border-foreground bg-card shadow-xl">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={movie.cover || '/placeholder.svg'}
@@ -58,25 +58,35 @@ export function SwipeCard({
           className="absolute inset-0 h-full w-full object-cover"
           draggable={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/20" />
 
-        {/* LIKE overlay */}
+        {/* top editorial label */}
+        <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3">
+          <span className="text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-white/80">
+            Now showing
+          </span>
+          <span className="font-display text-sm font-semibold tabular-nums text-white/80">
+            ★ {movie.rating?.toFixed(1) ?? '—'}
+          </span>
+        </div>
+
+        {/* LIKE stamp */}
         <motion.div
           style={{ opacity: likeOpacity }}
-          className="absolute left-5 top-6 rotate-[-12deg] rounded-lg border-2 border-like px-3 py-1"
+          className="absolute left-5 top-12 rotate-[-12deg] border-2 border-like px-3 py-1"
         >
-          <span className="font-display text-2xl font-extrabold uppercase tracking-wider text-like">
-            Like
+          <span className="font-display text-3xl font-bold uppercase italic tracking-wide text-like">
+            Yes
           </span>
         </motion.div>
 
-        {/* NOPE overlay */}
+        {/* NOPE stamp */}
         <motion.div
           style={{ opacity: nopeOpacity }}
-          className="absolute right-5 top-6 rotate-[12deg] rounded-lg border-2 border-dislike px-3 py-1"
+          className="absolute right-5 top-12 rotate-[12deg] border-2 border-dislike px-3 py-1"
         >
-          <span className="font-display text-2xl font-extrabold uppercase tracking-wider text-dislike">
-            Nope
+          <span className="font-display text-3xl font-bold uppercase italic tracking-wide text-dislike">
+            Pass
           </span>
         </motion.div>
 
@@ -86,27 +96,27 @@ export function SwipeCard({
               <Badge
                 key={g}
                 variant="secondary"
-                className="border-white/10 bg-white/10 text-white backdrop-blur"
+                className="rounded-none border border-white/30 bg-transparent text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-white"
               >
                 {g}
               </Badge>
             ))}
           </div>
-          <h2 className="mt-2 text-balance font-display text-2xl font-bold leading-tight text-white">
+          <h2 className="mt-3 text-balance font-display text-3xl font-bold leading-[0.95] text-white">
             {movie.title}
           </h2>
-          <p className="mt-0.5 text-sm text-white/70">
-            {movie.year} · {movie.tagline}
+          <p className="mt-1.5 text-sm italic text-white/75">
+            {movie.year} — {movie.tagline}
           </p>
         </div>
       </div>
 
       {/* gesture hints */}
-      <div className="pointer-events-none absolute inset-x-0 -bottom-px flex items-center justify-between px-2">
-        <span className="flex size-9 items-center justify-center rounded-full bg-dislike/20 text-dislike">
+      <div className="pointer-events-none absolute inset-x-0 -bottom-3.5 flex items-center justify-between px-1">
+        <span className="flex size-9 items-center justify-center border border-dislike bg-background text-dislike">
           <X className="size-5" aria-hidden="true" />
         </span>
-        <span className="flex size-9 items-center justify-center rounded-full bg-like/20 text-like">
+        <span className="flex size-9 items-center justify-center border border-like bg-background text-like">
           <Heart className="size-5" aria-hidden="true" />
         </span>
       </div>

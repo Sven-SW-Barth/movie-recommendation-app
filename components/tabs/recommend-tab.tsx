@@ -31,25 +31,35 @@ export function RecommendTab({
 
   return (
     <div className="flex flex-col px-5 pb-4">
-      <header className="pt-6">
-        <div className="flex items-center gap-2 text-primary">
-          <MoodIcon name={mood?.emoji ?? 'heart'} className="size-4" />
-          <span className="text-sm font-medium">{mood?.label}</span>
+      <header className="border-b border-border pb-3 pt-6">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-1.5 eyebrow">
+            <MoodIcon name={mood?.emoji ?? 'heart'} className="size-3.5" />
+            {mood?.label}
+          </span>
+          <span className="eyebrow">The Selects</span>
         </div>
-        <h1 className="mt-1 font-display text-2xl font-bold">For You</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Ranked by how closely each movie matches your{' '}
+        <h1 className="mt-2 font-display text-4xl font-bold leading-none">
+          For <span className="italic font-medium">You</span>
+        </h1>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Ranked by how closely each film matches your{' '}
           {mood?.label.toLowerCase()} taste.
         </p>
       </header>
 
       {swipeCount < 3 && (
-        <div className="mt-5 flex items-center gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-4">
-          <Layers className="size-5 shrink-0 text-primary" aria-hidden="true" />
-          <p className="flex-1 text-sm text-foreground">
-            Swipe a few movies in Train to sharpen these picks.
+        <div className="mt-5 flex items-center gap-3 border border-foreground bg-primary p-4 text-primary-foreground">
+          <Layers className="size-5 shrink-0" aria-hidden="true" />
+          <p className="flex-1 text-sm">
+            Review a few films in the Screening Room to sharpen these picks.
           </p>
-          <Button size="sm" variant="secondary" onClick={onGoTrain}>
+          <Button
+            size="sm"
+            variant="secondary"
+            className="rounded-none uppercase tracking-[0.12em]"
+            onClick={onGoTrain}
+          >
             Train
           </Button>
         </div>
@@ -57,37 +67,68 @@ export function RecommendTab({
 
       {/* Hero pick */}
       {top && (
-        <article className="relative mt-5 aspect-[3/4] w-full overflow-hidden rounded-3xl border border-border">
+        <article className="relative mt-6 aspect-[4/5] w-full overflow-hidden border border-foreground">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={top.movie.cover || '/placeholder.svg'}
             alt={`${top.movie.title} poster`}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-          <div className="absolute left-4 top-4">
-            <Badge className="bg-primary text-primary-foreground">
-              Top match · {Math.round(top.score)}%
-            </Badge>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/30" />
+
+          <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3">
+            <span className="text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-white/85">
+              Top match
+            </span>
+            <span className="text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-white/85">
+              No. 01
+            </span>
           </div>
+
+          {/* big overlapping match numeral */}
+          <div className="pointer-events-none absolute -bottom-4 right-2 text-right leading-[0.8]">
+            <span className="index-numeral block text-[7rem] text-white/95">
+              {Math.round(top.score)}
+            </span>
+            <span className="mr-3 text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-white/85">
+              Percent match
+            </span>
+          </div>
+
           <div className="absolute inset-x-0 bottom-0 p-5">
-            <h2 className="text-balance font-display text-2xl font-bold text-white">
+            <div className="flex flex-wrap gap-1.5">
+              {top.movie.genres.slice(0, 3).map((g) => (
+                <Badge
+                  key={g}
+                  variant="secondary"
+                  className="rounded-none border border-white/30 bg-transparent text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-white"
+                >
+                  {g}
+                </Badge>
+              ))}
+            </div>
+            <h2 className="mt-3 max-w-[70%] text-balance font-display text-3xl font-bold leading-[0.95] text-white">
               {top.movie.title}
             </h2>
-            <p className="mt-0.5 text-sm text-white/70">
-              {top.movie.year} · {top.movie.tagline}
+            <p className="mt-1.5 max-w-[70%] text-sm italic text-white/75">
+              {top.movie.year} — {top.movie.tagline}
             </p>
           </div>
         </article>
       )}
 
-      <ul className="mt-6 flex flex-col gap-3">
-        {ranked.slice(1).map(({ movie, score }) => (
-          <li
-            key={movie.id}
-            className="flex gap-3 rounded-2xl border border-border bg-card p-3"
-          >
-            <div className="relative h-24 w-16 shrink-0 overflow-hidden rounded-lg">
+      <div className="mt-7 flex items-center justify-between border-b border-border pb-2">
+        <span className="eyebrow">Also screening</span>
+        <span className="eyebrow">{ranked.length - 1} films</span>
+      </div>
+
+      <ul className="mt-1 divide-y divide-border">
+        {ranked.slice(1).map(({ movie, score }, i) => (
+          <li key={movie.id} className="flex items-center gap-4 py-4">
+            <span className="index-numeral w-8 shrink-0 text-2xl text-muted-foreground">
+              {String(i + 2).padStart(2, '0')}
+            </span>
+            <div className="relative h-20 w-14 shrink-0 overflow-hidden border border-foreground">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={movie.cover || '/placeholder.svg'}
@@ -96,25 +137,17 @@ export function RecommendTab({
               />
             </div>
             <div className="flex min-w-0 flex-1 flex-col justify-center">
-              <div className="flex items-center justify-between gap-2">
-                <h3 className="truncate font-display font-semibold">
-                  {movie.title}
-                </h3>
-                <span className="shrink-0 font-mono text-sm tabular-nums text-primary">
-                  {Math.round(score)}%
-                </span>
-              </div>
-              <p className="truncate text-xs text-muted-foreground">
-                {movie.year}
+              <h3 className="truncate font-display text-lg font-bold leading-tight">
+                {movie.title}
+              </h3>
+              <p className="text-xs italic text-muted-foreground">
+                {movie.year} · {movie.genres.slice(0, 2).join(' / ')}
               </p>
-              <div className="mt-1.5 flex flex-wrap gap-1">
-                {movie.genres.slice(0, 2).map((g) => (
-                  <Badge key={g} variant="secondary" className="text-[11px]">
-                    {g}
-                  </Badge>
-                ))}
-              </div>
             </div>
+            <span className="index-numeral shrink-0 text-xl tabular-nums">
+              {Math.round(score)}
+              <span className="text-xs text-muted-foreground">%</span>
+            </span>
           </li>
         ))}
       </ul>

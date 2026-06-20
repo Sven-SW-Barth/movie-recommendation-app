@@ -5,7 +5,6 @@ import type { MoodSummary } from '@/app/actions/app'
 import { MoodIcon } from '@/components/mood-icon'
 import { StatsBars } from '@/components/stats-bars'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 import { Check, RotateCcw } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -32,16 +31,22 @@ export function MoodsTab({
 
   return (
     <div className="flex flex-col px-5 pb-4">
-      <header className="pt-6">
-        <h1 className="font-display text-2xl font-bold">Your moods</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Each mood is a separate taste profile. Training only changes the
-          active one — switch anytime.
+      <header className="border-b border-border pb-3 pt-6">
+        <div className="flex items-center justify-between">
+          <p className="eyebrow">The Index</p>
+          <p className="eyebrow">{moods.length} profiles</p>
+        </div>
+        <h1 className="mt-2 font-display text-4xl font-bold leading-none">
+          Your <span className="italic font-medium">moods</span>
+        </h1>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Each mood is its own taste profile. Training changes only the active
+          one — switch anytime.
         </p>
       </header>
 
-      <ul className="mt-5 flex flex-col gap-2.5">
-        {moods.map((mood) => {
+      <ul className="mt-4 divide-y divide-border border-y border-border">
+        {moods.map((mood, i) => {
           const isActive = mood.id === activeMood
           const count = countFor(mood.id)
           return (
@@ -52,37 +57,45 @@ export function MoodsTab({
                 onClick={() => !isActive && onSwitch(mood.id)}
                 aria-pressed={isActive}
                 className={cn(
-                  'flex w-full items-center gap-3 rounded-2xl border p-3.5 text-left transition-colors disabled:opacity-60',
+                  'flex w-full items-center gap-4 p-3.5 text-left transition-colors disabled:opacity-60',
                   isActive
-                    ? 'border-primary bg-primary/10'
-                    : 'border-border bg-card hover:bg-accent',
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-background hover:bg-accent',
                 )}
               >
                 <span
                   className={cn(
-                    'flex size-11 shrink-0 items-center justify-center rounded-xl',
+                    'index-numeral w-7 shrink-0 text-xl',
                     isActive
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-secondary text-foreground',
+                      ? 'text-primary-foreground/60'
+                      : 'text-muted-foreground',
                   )}
                 >
-                  <MoodIcon name={mood.emoji} className="size-5" />
+                  {String(i + 1).padStart(2, '0')}
                 </span>
+                <MoodIcon name={mood.emoji} className="size-5 shrink-0" />
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center gap-2">
-                    <span className="font-display font-semibold">
+                    <span className="font-display text-lg font-bold leading-tight">
                       {mood.label}
                     </span>
                     {isActive && (
-                      <Badge className="bg-primary text-primary-foreground">
-                        <Check className="size-3" aria-hidden="true" />
+                      <span className="flex items-center gap-1 border border-primary-foreground/40 px-1.5 py-0.5 text-[0.5625rem] font-semibold uppercase tracking-[0.14em]">
+                        <Check className="size-2.5" aria-hidden="true" />
                         Active
-                      </Badge>
+                      </span>
                     )}
                   </span>
-                  <span className="mt-0.5 block truncate text-xs text-muted-foreground">
+                  <span
+                    className={cn(
+                      'mt-0.5 block truncate text-xs',
+                      isActive
+                        ? 'text-primary-foreground/80'
+                        : 'text-muted-foreground',
+                    )}
+                  >
                     {count > 0
-                      ? `${count} ${count === 1 ? 'rating' : 'ratings'} · trained`
+                      ? `${count} ${count === 1 ? 'review' : 'reviews'} · trained`
                       : 'Not trained yet'}
                   </span>
                 </span>
@@ -92,22 +105,20 @@ export function MoodsTab({
         })}
       </ul>
 
-      <section className="mt-8">
+      <section className="mt-10 border-t border-border pt-4">
         <div className="flex items-center justify-between">
-          <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            {active?.label} profile
-          </h2>
+          <h2 className="eyebrow">{active?.label} profile</h2>
           <Button
             variant="ghost"
             size="sm"
             onClick={onReset}
-            className="text-muted-foreground hover:text-foreground"
+            className="h-auto rounded-none p-0 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-muted-foreground hover:bg-transparent hover:text-foreground"
           >
-            <RotateCcw className="size-4" aria-hidden="true" />
+            <RotateCcw className="size-3.5" aria-hidden="true" />
             Reset
           </Button>
         </div>
-        <div className="mt-3 rounded-2xl border border-border bg-card p-4">
+        <div className="mt-4">
           <StatsBars stats={stats} />
         </div>
       </section>
