@@ -1,26 +1,25 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { movies, getMood } from '@/lib/catalog'
+import { movies } from '@/lib/catalog'
 import { SwipeCard } from '@/components/swipe-card'
 import { StatsBars } from '@/components/stats-bars'
 import { Button } from '@/components/ui/button'
 import { Heart, X, RotateCcw, CheckCircle2 } from 'lucide-react'
 
 export function TrainTab({
-  activeMood,
+  moodName,
   stats,
   swipedMovieIds,
   onSwipe,
   onReset,
 }: {
-  activeMood: string
+  moodName: string
   stats: Record<string, number>
   swipedMovieIds: string[]
   onSwipe: (movieId: string, liked: boolean) => void
   onReset: () => void
 }) {
-  const mood = getMood(activeMood)
   const swiped = useMemo(() => new Set(swipedMovieIds), [swipedMovieIds])
   const deck = useMemo(
     () => movies.filter((m) => !swiped.has(m.id)),
@@ -44,7 +43,7 @@ export function TrainTab({
       <header className="border-b border-border pb-3 pt-6">
         <div className="flex items-center justify-between">
           <p className="eyebrow">The Screening Room</p>
-          <p className="eyebrow">{mood?.label}</p>
+          <p className="max-w-[55%] truncate eyebrow">{moodName}</p>
         </div>
         <h1 className="mt-2 font-display text-4xl font-bold leading-none">
           Train your <span className="italic font-medium">taste</span>
@@ -128,7 +127,7 @@ export function TrainTab({
       <section className="mt-10 border-t border-border pt-4">
         <div className="flex items-center justify-between">
           <h2 className="eyebrow">Live taste profile</h2>
-          <span className="eyebrow">{mood?.label}</span>
+          <span className="max-w-[55%] truncate eyebrow">{moodName}</span>
         </div>
         <div className="mt-4">
           <StatsBars stats={stats} />

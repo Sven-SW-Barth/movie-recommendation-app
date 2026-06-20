@@ -8,10 +8,10 @@ import { headers } from 'next/headers'
 import { revalidatePath } from 'next/cache'
 import {
   applySwipe,
-  getMood,
   getMovie,
-  moods,
-  presetFor,
+  ICON_NAMES,
+  normalizeStats,
+  type IconName,
 } from '@/lib/catalog'
 
 async function getUserId() {
@@ -20,9 +20,19 @@ async function getUserId() {
   return session.user.id
 }
 
+export type Mood = {
+  moodId: string
+  name: string
+  icon: string
+  stats: Record<string, number>
+  swipeCount: number
+}
+
 export type UserState = {
   onboarded: boolean
   activeMood: string | null
+  activeName: string | null
+  activeIcon: string | null
   stats: Record<string, number>
   swipedMovieIds: string[]
   swipeCount: number
@@ -44,7 +54,6 @@ async function ensureSettings(userId: string) {
     .returning()
   if (inserted.length > 0) return inserted[0]
 
-  // Another concurrent request created it first — read it back.
   const row = await db
     .select()
     .from(userSettings)
@@ -53,31 +62,14 @@ async function ensureSettings(userId: string) {
   return row[0]
 }
 
-/** Get or create the profile (stats) for a given mood. */
-async function ensureProfile(userId: string, mood: string) {
-  const existing = await db
+/** Look up one of the user's mood profiles by its id. */
+async function findProfile(userId: string, moodId: string) {
+  const rows = await db
     .select()
     .from(moodProfiles)
-    .where(and(eq(moodProfiles.userId, userId), eq(moodProfiles.mood, mood)))
+    .where(and(eq(moodProfiles.userId, userId), eq(moodProfiles.mood, moodId)))
     .limit(1)
-  if (existing.length > 0) return existing[0]
-
-  const inserted = await db
-    .insert(moodProfiles)
-    .values({ userId, mood, stats: presetFor(mood) })
-    .onConflictDoNothing({
-      target: [moodProfiles.userId, moodProfiles.mood],
-    })
-    .returning()
-  if (inserted.length > 0) return inserted[0]
-
-  // Lost the race — another request created it first.
-  const row = await db
-    .select()
-    .from(moodProfiles)
-    .where(and(eq(moodProfiles.userId, userId), eq(moodProfiles.mood, mood)))
-    .limit(1)
-  return row[0]
+  return rows[0]
 }
 
 /** Full state needed to render the app for the current user. */
@@ -85,57 +77,84 @@ export async function getUserState(): Promise<UserState> {
   const userId = await getUserId()
   const settings = await ensureSettings(userId)
 
-  if (!settings.onboarded || !settings.activeMood) {
-    return {
-      onboarded: settings.onboarded,
-      activeMood: settings.activeMood,
-      stats: {},
-      swipedMovieIds: [],
-      swipeCount: 0,
-    }
+  const empty: UserState = {
+    onboarded: settings.onboarded,
+    activeMood: settings.activeMood,
+    activeName: null,
+    activeIcon: null,
+    stats: {},
+    swipedMovieIds: [],
+    swipeCount: 0,
   }
 
-  const profile = await ensureProfile(userId, settings.activeMood)
+  if (!settings.onboarded || !settings.activeMood) return empty
+
+  const profile = await findProfile(userId, settings.activeMood)
+  if (!profile) return empty
 
   const moodSwipes = await db
     .select()
     .from(swipes)
-    .where(
-      and(eq(swipes.userId, userId), eq(swipes.mood, settings.activeMood)),
-    )
+    .where(and(eq(swipes.userId, userId), eq(swipes.mood, profile.mood)))
     .orderBy(desc(swipes.createdAt))
 
   return {
     onboarded: settings.onboarded,
-    activeMood: settings.activeMood,
+    activeMood: profile.mood,
+    activeName: profile.name,
+    activeIcon: profile.icon,
     stats: profile.stats,
     swipedMovieIds: moodSwipes.map((s) => s.movieId),
     swipeCount: moodSwipes.length,
   }
 }
 
-/** Complete onboarding by choosing the first active mood. */
-export async function completeOnboarding(moodId: string): Promise<void> {
-  const userId = await getUserId()
-  if (!getMood(moodId)) throw new Error('Unknown mood')
+export type CreateMoodInput = {
+  name: string
+  icon: string
+  weights: Record<string, number>
+}
 
+/**
+ * Create a new user mood from an analyzed chat. Generates a stable mood id,
+ * stores the LLM-derived weights as both the reset baseline and the live
+ * (trainable) stats, makes it the active mood, and marks the user onboarded.
+ */
+export async function createMood(input: CreateMoodInput): Promise<string> {
+  const userId = await getUserId()
   await ensureSettings(userId)
-  await ensureProfile(userId, moodId)
+
+  const name = input.name.trim().slice(0, 40) || 'My mood'
+  const icon = (ICON_NAMES as readonly string[]).includes(input.icon)
+    ? (input.icon as IconName)
+    : 'sparkles'
+  const stats = normalizeStats(input.weights)
+  const moodId = crypto.randomUUID()
+
+  await db.insert(moodProfiles).values({
+    userId,
+    mood: moodId,
+    name,
+    icon,
+    baseStats: stats,
+    stats,
+  })
+
   await db
     .update(userSettings)
     .set({ activeMood: moodId, onboarded: true, updatedAt: new Date() })
     .where(eq(userSettings.userId, userId))
 
   revalidatePath('/')
+  return moodId
 }
 
-/** Switch the active mood (creating its profile if needed). */
+/** Switch the active mood. Validates the mood belongs to this user. */
 export async function setActiveMood(moodId: string): Promise<void> {
   const userId = await getUserId()
-  if (!getMood(moodId)) throw new Error('Unknown mood')
+  const profile = await findProfile(userId, moodId)
+  if (!profile) throw new Error('Unknown mood')
 
-  await ensureSettings(userId)
-  await ensureProfile(userId, moodId)
   await db
     .update(userSettings)
     .set({ activeMood: moodId, updatedAt: new Date() })
@@ -151,7 +170,6 @@ export type SwipeResult = {
 
 /**
  * Record a swipe for the active mood and update ONLY that mood's profile.
- * Returns the updated stats so the UI can animate the change.
  */
 export async function recordSwipe(
   movieId: string,
@@ -163,9 +181,10 @@ export async function recordSwipe(
 
   const settings = await ensureSettings(userId)
   if (!settings.activeMood) throw new Error('No active mood')
-  const mood = settings.activeMood
 
-  const profile = await ensureProfile(userId, mood)
+  const profile = await findProfile(userId, settings.activeMood)
+  if (!profile) throw new Error('No active mood profile')
+
   const nextStats = applySwipe(profile.stats, movie, liked)
 
   await db
@@ -173,57 +192,85 @@ export async function recordSwipe(
     .set({ stats: nextStats, updatedAt: new Date() })
     .where(eq(moodProfiles.id, profile.id))
 
-  await db.insert(swipes).values({ userId, movieId, mood, liked })
+  await db
+    .insert(swipes)
+    .values({ userId, movieId, mood: profile.mood, liked })
 
   revalidatePath('/')
-  return { stats: nextStats, mood }
+  return { stats: nextStats, mood: profile.mood }
 }
 
-/** Reset (delete swipes + reset stats to preset) for the active mood. */
+/** Reset (delete swipes + restore the analyzed baseline) for the active mood. */
 export async function resetActiveMood(): Promise<void> {
   const userId = await getUserId()
   const settings = await ensureSettings(userId)
   if (!settings.activeMood) return
-  const mood = settings.activeMood
+
+  const profile = await findProfile(userId, settings.activeMood)
+  if (!profile) return
 
   await db
     .delete(swipes)
-    .where(and(eq(swipes.userId, userId), eq(swipes.mood, mood)))
+    .where(and(eq(swipes.userId, userId), eq(swipes.mood, profile.mood)))
 
-  const profile = await ensureProfile(userId, mood)
   await db
     .update(moodProfiles)
-    .set({ stats: presetFor(mood), updatedAt: new Date() })
+    .set({ stats: profile.baseStats, updatedAt: new Date() })
     .where(eq(moodProfiles.id, profile.id))
 
   revalidatePath('/')
 }
 
-export type MoodSummary = {
-  id: string
-  trained: boolean
-  swipeCount: number
+/** Delete a mood and its swipes. Reassigns the active mood if needed. */
+export async function deleteMood(moodId: string): Promise<void> {
+  const userId = await getUserId()
+  const profile = await findProfile(userId, moodId)
+  if (!profile) return
+
+  await db
+    .delete(swipes)
+    .where(and(eq(swipes.userId, userId), eq(swipes.mood, moodId)))
+  await db.delete(moodProfiles).where(eq(moodProfiles.id, profile.id))
+
+  const settings = await ensureSettings(userId)
+  if (settings.activeMood === moodId) {
+    const remaining = await db
+      .select()
+      .from(moodProfiles)
+      .where(eq(moodProfiles.userId, userId))
+      .orderBy(desc(moodProfiles.createdAt))
+      .limit(1)
+    await db
+      .update(userSettings)
+      .set({
+        activeMood: remaining[0]?.mood ?? null,
+        updatedAt: new Date(),
+      })
+      .where(eq(userSettings.userId, userId))
+  }
+
+  revalidatePath('/')
 }
 
-/** Per-mood training summary, used by the Moods tab. */
-export async function getMoodSummaries(): Promise<MoodSummary[]> {
+/** All of the user's moods, with per-mood swipe counts. */
+export async function getUserMoods(): Promise<Mood[]> {
   const userId = await getUserId()
 
   const profiles = await db
     .select()
     .from(moodProfiles)
     .where(eq(moodProfiles.userId, userId))
+    .orderBy(moodProfiles.createdAt)
   const allSwipes = await db
     .select()
     .from(swipes)
     .where(eq(swipes.userId, userId))
 
-  return moods.map((m) => {
-    const count = allSwipes.filter((s) => s.mood === m.id).length
-    return {
-      id: m.id,
-      trained: profiles.some((p) => p.mood === m.id),
-      swipeCount: count,
-    }
-  })
+  return profiles.map((p) => ({
+    moodId: p.mood,
+    name: p.name,
+    icon: p.icon,
+    stats: p.stats,
+    swipeCount: allSwipes.filter((s) => s.mood === p.mood).length,
+  }))
 }

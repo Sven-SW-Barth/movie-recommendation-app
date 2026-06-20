@@ -3,14 +3,16 @@ import moviesData from '@/data/movies.json'
 export type Category = {
   id: string
   label: string
+  /** Plain-language description used to brief the mood-analysis LLM. */
+  hint: string
 }
 
+/** A user-created mood: a named, separately-trainable taste profile. */
 export type Mood = {
-  id: string
-  label: string
-  emoji: string
-  description: string
-  preset: Record<string, number>
+  moodId: string
+  name: string
+  icon: string
+  stats: Record<string, number>
 }
 
 export type Movie = {
@@ -31,92 +33,93 @@ export type Movie = {
  * the exact same axes the movies are scored on.
  */
 const CATEGORY_DEFS: Category[] = [
-  { id: 'funny', label: 'Funny' },
-  { id: 'cozy', label: 'Cozy' },
-  { id: 'feel_good', label: 'Feel-Good' },
-  { id: 'date_night', label: 'Date Night' },
-  { id: 'weird_people', label: 'Weird People' },
-  { id: 'dark', label: 'Dark' },
-  { id: 'mental_load', label: 'Mental Load' },
-  { id: 'rabbit_hole', label: 'Rabbit Hole' },
-  { id: 'hangover_friendly', label: 'Hangover-Friendly' },
-]
-
-export const categories: Category[] = CATEGORY_DEFS
-
-/**
- * Each mood is an independent, separately-trainable profile. A mood maps to one
- * of the shared categories and starts biased toward it (that category high, the
- * rest neutral); swiping then refines the whole nine-axis vector for that mood
- * only.
- */
-const MOOD_DEFS: Omit<Mood, 'preset'>[] = [
+  { id: 'funny', label: 'Funny', hint: 'comedic, light, laugh-out-loud' },
+  { id: 'cozy', label: 'Cozy', hint: 'warm, comforting, easy to sink into' },
   {
     id: 'feel_good',
     label: 'Feel-Good',
-    emoji: 'sun',
-    description: 'Uplifting, warm-hearted watches.',
-  },
-  {
-    id: 'funny',
-    label: 'Funny',
-    emoji: 'laugh',
-    description: 'Laugh-out-loud, easy fun.',
-  },
-  {
-    id: 'cozy',
-    label: 'Cozy',
-    emoji: 'coffee',
-    description: 'Comforting and easy to sink into.',
+    hint: 'uplifting, hopeful, leaves you happy',
   },
   {
     id: 'date_night',
     label: 'Date Night',
-    emoji: 'heart',
-    description: 'Crowd-pleasers to share.',
+    hint: 'romantic, crowd-pleasing, good to share with someone',
+  },
+  {
+    id: 'weird_people',
+    label: 'Weird People',
+    hint: 'eccentric, offbeat, quirky characters and oddball humor',
   },
   {
     id: 'dark',
     label: 'Dark',
-    emoji: 'skull',
-    description: 'Bleak, intense, no easy comfort.',
+    hint: 'bleak, intense, heavy, emotionally serious or disturbing',
   },
   {
     id: 'mental_load',
     label: 'Mind Bender',
-    emoji: 'brain',
-    description: 'Dense and demanding.',
+    hint: 'intellectual, dense, demanding, makes you think hard',
   },
   {
     id: 'rabbit_hole',
     label: 'Rabbit Hole',
-    emoji: 'telescope',
-    description: 'Layered worlds to fall into.',
-  },
-  {
-    id: 'weird_people',
-    label: 'Oddballs',
-    emoji: 'sparkles',
-    description: 'Eccentric, offbeat characters.',
+    hint: 'layered, immersive worlds you fall deep into',
   },
   {
     id: 'hangover_friendly',
-    label: 'Hangover',
-    emoji: 'pizza',
-    description: 'Low-effort, foggy-brain friendly.',
+    label: 'Easy Watch',
+    hint: 'low-effort, undemanding, foggy-brain friendly',
   },
 ]
 
-const PRESET_HIGH = 80
-const PRESET_BASE = 50
+export const categories: Category[] = CATEGORY_DEFS
 
-export const moods: Mood[] = MOOD_DEFS.map((m) => {
-  const preset: Record<string, number> = {}
+/** The allowed mood icons (must exist in components/mood-icon.tsx). */
+export const ICON_NAMES = [
+  'sun',
+  'laugh',
+  'coffee',
+  'heart',
+  'skull',
+  'brain',
+  'telescope',
+  'sparkles',
+  'pizza',
+  'moon',
+  'cloud',
+  'zap',
+  'film',
+  'flame',
+  'leaf',
+] as const
+
+export type IconName = (typeof ICON_NAMES)[number]
+
+/** A short brief of every category, fed to the mood-analysis model. */
+export const CATEGORY_GUIDE = CATEGORY_DEFS.map(
+  (c) => `- ${c.id} (${c.label}): ${c.hint}`,
+).join('\n')
+
+export const NEUTRAL_SCORE = 50
+
+/** A neutral starting profile (every axis at 50). */
+export function neutralStats(): Record<string, number> {
+  const base: Record<string, number> = {}
+  for (const c of categories) base[c.id] = NEUTRAL_SCORE
+  return base
+}
+
+/** Coerce an arbitrary weights map into a clean, clamped 9-axis profile. */
+export function normalizeStats(
+  input: Partial<Record<string, number>>,
+): Record<string, number> {
+  const out: Record<string, number> = {}
   for (const c of categories) {
-    preset[c.id] = c.id === m.id ? PRESET_HIGH : PRESET_BASE
+    const raw = input[c.id]
+    out[c.id] = typeof raw === 'number' ? clamp(raw) : NEUTRAL_SCORE
   }
-  return { ...m, preset }
-})
+  return out
+}
 
 type RawMovie = {
   id: string
@@ -150,11 +153,6 @@ export const movies: Movie[] = (moviesData as RawMovie[]).map((r) => {
   }
 })
 
-export function getMood(id: string | null | undefined): Mood | undefined {
-  if (!id) return undefined
-  return moods.find((m) => m.id === id)
-}
-
 export function getMovie(id: string): Movie | undefined {
   return movies.find((m) => m.id === id)
 }
@@ -165,16 +163,6 @@ export function getCategory(id: string): Category | undefined {
 
 // How much a single like/dislike nudges a category score.
 export const STEP = 0.5
-
-// Default starting stats for a mood = its preset (cloned).
-export function presetFor(moodId: string): Record<string, number> {
-  const mood = getMood(moodId)
-  const base: Record<string, number> = {}
-  for (const c of categories) {
-    base[c.id] = mood?.preset[c.id] ?? PRESET_BASE
-  }
-  return base
-}
 
 function clamp(n: number): number {
   return Math.max(0, Math.min(100, n))
@@ -205,7 +193,7 @@ export function applySwipe(
   for (const c of categories) {
     const attr = movie.attributes[c.id] ?? 0
     if (attr >= EXPRESS_THRESHOLD) {
-      const current = next[c.id] ?? PRESET_BASE
+      const current = next[c.id] ?? NEUTRAL_SCORE
       next[c.id] = clamp(current + direction * STEP)
     }
   }
@@ -222,8 +210,8 @@ export function matchScore(
 ): number {
   let total = 0
   for (const c of categories) {
-    const s = stats[c.id] ?? PRESET_BASE
-    const a = movie.attributes[c.id] ?? PRESET_BASE
+    const s = stats[c.id] ?? NEUTRAL_SCORE
+    const a = movie.attributes[c.id] ?? NEUTRAL_SCORE
     total += Math.abs(s - a)
   }
   const meanDiff = total / categories.length

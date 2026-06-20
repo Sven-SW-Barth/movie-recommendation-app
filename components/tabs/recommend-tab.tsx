@@ -1,25 +1,25 @@
 'use client'
 
 import { useMemo } from 'react'
-import { movies, getMood, matchScore } from '@/lib/catalog'
+import { movies, matchScore } from '@/lib/catalog'
 import { MoodIcon } from '@/components/mood-icon'
 import { Badge } from '@/components/ui/badge'
 import { Layers } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function RecommendTab({
-  activeMood,
+  moodName,
+  moodIcon,
   stats,
   swipeCount,
   onGoTrain,
 }: {
-  activeMood: string
+  moodName: string
+  moodIcon: string
   stats: Record<string, number>
   swipeCount: number
   onGoTrain: () => void
 }) {
-  const mood = getMood(activeMood)
-
   const ranked = useMemo(() => {
     return [...movies]
       .map((m) => ({ movie: m, score: matchScore(stats, m) }))
@@ -33,9 +33,9 @@ export function RecommendTab({
     <div className="flex flex-col px-5 pb-4">
       <header className="border-b border-border pb-3 pt-6">
         <div className="flex items-center justify-between">
-          <span className="flex items-center gap-1.5 eyebrow">
-            <MoodIcon name={mood?.emoji ?? 'heart'} className="size-3.5" />
-            {mood?.label}
+          <span className="flex max-w-[60%] items-center gap-1.5 eyebrow">
+            <MoodIcon name={moodIcon} className="size-3.5 shrink-0" />
+            <span className="truncate">{moodName}</span>
           </span>
           <span className="eyebrow">The Selects</span>
         </div>
@@ -44,7 +44,7 @@ export function RecommendTab({
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
           Ranked by how closely each film matches your{' '}
-          {mood?.label.toLowerCase()} taste.
+          <span className="italic">{moodName}</span> profile.
         </p>
       </header>
 

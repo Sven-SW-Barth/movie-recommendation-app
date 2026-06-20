@@ -1,13 +1,19 @@
 import {
   Brain,
+  Cloud,
   Coffee,
+  Film,
+  Flame,
   Heart,
   Laugh,
+  Leaf,
+  Moon,
   Pizza,
   Skull,
   Sparkles,
   Sun,
   Telescope,
+  Zap,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -21,6 +27,12 @@ const ICONS: Record<string, LucideIcon> = {
   telescope: Telescope,
   sparkles: Sparkles,
   pizza: Pizza,
+  moon: Moon,
+  cloud: Cloud,
+  zap: Zap,
+  film: Film,
+  flame: Flame,
+  leaf: Leaf,
 }
 
 export function MoodIcon({

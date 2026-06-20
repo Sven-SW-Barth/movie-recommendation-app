@@ -71,13 +71,21 @@ export const userSettings = pgTable('user_settings', {
   updatedAt: timestamp('updatedAt').notNull().defaultNow(),
 })
 
-// One row per (user, mood). Each mood is an independent preference profile.
-// `stats` is a JSON map of categoryId -> score (0-100). Training only mutates
-// the profile of the active mood.
+// One row per user-created mood. Each mood is an independent, separately
+// trainable preference profile generated from an LLM conversation.
+//   - `mood`      stable per-user id (uuid) referenced by settings + swipes
+//   - `name`      user-given label (e.g. "Sunday hangover")
+//   - `icon`      icon name from the allowed set (see lib/catalog ICON_NAMES)
+//   - `baseStats` the profile the LLM derived from the chat (reset target)
+//   - `stats`     the current, swipe-trained profile (categoryId -> 0-100)
+// Training only mutates the `stats` of the active mood.
 export const moodProfiles = pgTable('mood_profiles', {
   id: serial('id').primaryKey(),
   userId: text('userId').notNull(),
   mood: text('mood').notNull(),
+  name: text('name').notNull().default('My mood'),
+  icon: text('icon').notNull().default('sparkles'),
+  baseStats: jsonb('baseStats').notNull().$type<Record<string, number>>(),
   stats: jsonb('stats').notNull().$type<Record<string, number>>(),
   createdAt: timestamp('createdAt').notNull().defaultNow(),
   updatedAt: timestamp('updatedAt').notNull().defaultNow(),
