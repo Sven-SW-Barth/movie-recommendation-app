@@ -20,9 +20,17 @@ export const auth = betterAuth({
     ...(process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? [`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`]
       : []),
-    ...(process.env.NODE_ENV === 'development'
-      ? ['http://localhost:3000', 'http://127.0.0.1:3000']
-      : []),
+    // The v0 preview iframe and Vercel deployments are served from these
+    // hosts, and none of the URL env vars above are set in the v0 sandbox.
+    // Better Auth supports host wildcards, so trust them explicitly — without
+    // this, every sign-in/sign-up from the preview is rejected as an
+    // "Invalid origin" and the app appears not to load.
+    '*.vercel.run',
+    '*.vusercontent.net',
+    '*.v0.dev',
+    '*.vercel.app',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
   ],
   session: {
     expiresIn: 60 * 60 * 24 * 7, // 7 days
