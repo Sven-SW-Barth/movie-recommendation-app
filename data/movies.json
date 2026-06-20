@@ -6,7 +6,7 @@
     "year": 1999,
     "runtime": 97,
     "description": "A 1999 movie with date-night, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=10%20Things%20I%20Hate%20About%20You%201999",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/eKGvcglPR7OBc4CZ96ohrTDzTEE.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/4951",
     "genres": [
       "Comedy",
@@ -46,7 +46,8 @@
       "romantic"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -71,7 +72,7 @@
     "year": 1968,
     "runtime": 149,
     "description": "1968 film by Stanley Kubrick",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20A%20scene%20from%202001.%20A%20Space%20Odyssey%2C%20a%201968%20film%20directed%20by%20Stanley%20Kubrick%201968%20-%20Touring%20Club%20Italiano%2004%200826.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/g16ONGwG7l3R94JFPKCx1orZvYD.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/62",
     "genres": [
       "Science Fiction",
@@ -109,6 +110,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.1,
@@ -134,7 +136,7 @@
     "year": 2012,
     "runtime": 109,
     "description": "2012 film directed by Phil Lord and Christopher Miller",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/21%20Jump%20Street.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/8v3Sqv9UcIUC4ebmpKWROqPBINZ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/64688",
     "genres": [
       "Action",
@@ -170,6 +172,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 6.9,
@@ -195,7 +198,7 @@
     "year": 2001,
     "runtime": 135,
     "description": "A 2001 movie with emotional, mental-load energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=A%20Beautiful%20Mind%202001",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/slNnHqV7xeXuqCfHFlqGOj9MJjK.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/453",
     "genres": [
       "Drama",
@@ -233,7 +236,10 @@
       "uplifting"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -258,7 +264,7 @@
     "year": 2024,
     "runtime": 109,
     "description": "A 2024 movie with dark, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Abigail%202024",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/sTjzc7qp08uHxzPTN6jh85Cy9UH.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1111873",
     "genres": [
       "Horror",
@@ -299,7 +305,10 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -324,7 +333,7 @@
     "year": 2001,
     "runtime": 122,
     "description": "A 2001 movie with whimsical, cozy energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Amelie%202001",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/cIfC19f4puvpBDyVS7AK8W31zGj.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/194",
     "genres": [
       "Comedy",
@@ -360,7 +369,10 @@
       "whimsical"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -385,7 +397,7 @@
     "year": 1999,
     "runtime": 122,
     "description": "A 1999 movie with satirical, dark energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=American%20Beauty%201999",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/n2qAP6G67MrmS7At2NLhlZlYqB7.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/14",
     "genres": [
       "Drama"
@@ -421,7 +433,10 @@
       "suburbs"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -446,7 +461,7 @@
     "year": 2023,
     "runtime": 125,
     "description": "A 2023 movie with weird, superhero energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Ant-Man%20and%20the%20Wasp%3A%20Quantumania%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/j3C9sEaEmqFqoZmnzQMFzKbLuNQ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/640146",
     "genres": [
       "Action",
@@ -489,7 +504,10 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 6.3,
     "mood_scores": {
@@ -514,7 +532,7 @@
     "year": 1979,
     "runtime": 147,
     "description": "1979 film directed by Francis Ford Coppola",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr%20-%20law%20keven%20-%20Apocalypse%20Now%5E.......minus%20the%20Helicopters...jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/u8rsAW9xWcsA511NBsOEsbSnVlC.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/28",
     "genres": [
       "Drama",
@@ -554,7 +572,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -579,7 +599,7 @@
     "year": 2009,
     "runtime": 162,
     "description": "2009 film directed by James Cameron",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avatar%20Flight%20of%20Passage%20%2833825582954%29.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/8VV4YUwOGxgolFZTo2SgNwsfznR.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/19995",
     "genres": [
       "Action",
@@ -623,7 +643,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -648,7 +670,7 @@
     "year": 2022,
     "runtime": 192,
     "description": "2022 film by James Cameron",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estrena%20en%20catal%C3%A0%20d%27Avatar%20El%20sentit%20de%20l%27aigua%203.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/dsBpvG4m0uOerBOuNITL9rvaD0I.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/76600",
     "genres": [
       "Science Fiction",
@@ -689,7 +711,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -714,7 +738,7 @@
     "year": 2019,
     "runtime": 181,
     "description": "A 2019 movie with superhero, epic energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Avengers%3A%20Endgame%202019",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/ibO8Pj0aA1nwj3Q9FMpMcYZkdCA.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/299534",
     "genres": [
       "Adventure",
@@ -755,7 +779,10 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -780,7 +807,7 @@
     "year": 1985,
     "runtime": 116,
     "description": "A 1985 movie with funny, feel-good energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Back%20to%20the%20Future%201985",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/i9cmMivQ8cgTYUjfrzznsFJ0GYg.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/105",
     "genres": [
       "Adventure",
@@ -817,7 +844,8 @@
       "science fiction"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -842,7 +870,7 @@
     "year": 2023,
     "runtime": 114,
     "description": "2023 film directed by Greta Gerwig",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbie%20and%20Ken%20costumes%20from%20Barbie%20movie%20at%20Warner%20Bros.%20Studio%20Tour%20Hollywood.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/6WP6FD932ce3H3Xi2UU5CVI7ilL.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/346698",
     "genres": [
       "Comedy",
@@ -888,6 +916,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.0,
@@ -913,7 +942,7 @@
     "year": 2017,
     "runtime": 116,
     "description": "2017 film directed by Seth Gordon",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baywatch%20Bondi%20Beach%20%2833900730803%29.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/6mcNfRoMJJWAYgbI4C8YoIcxrsN.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/339846",
     "genres": [
       "Comedy",
@@ -960,7 +989,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 6.1,
     "mood_scores": {
@@ -985,7 +1016,7 @@
     "year": 2018,
     "runtime": 135,
     "description": "2018 film directed by Ryan Coogler",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/l6y476RPWK35Y7zmiMPcih4uU7A.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/284054",
     "genres": [
       "Action",
@@ -1025,6 +1056,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.4,
@@ -1050,7 +1082,7 @@
     "year": 2010,
     "runtime": 108,
     "description": "A 2010 movie with dark, psychological energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Black%20Swan%202010",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/f5yFgSs9wMCP9lNnRGUM1QI0tXs.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/44214",
     "genres": [
       "Drama",
@@ -1097,7 +1129,10 @@
       "thriller"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -1122,7 +1157,7 @@
     "year": 2021,
     "runtime": 134,
     "description": "A 2021 movie with action, accessible energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Black%20Widow%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/gkyoYo9d6g98xjScnZwh3nL2Yfp.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/497698",
     "genres": [
       "Action",
@@ -1152,7 +1187,10 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.2,
     "mood_scores": {
@@ -1177,7 +1215,7 @@
     "year": 1982,
     "runtime": 117,
     "description": "A 1982 movie with philosophical, slow energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Blade%20Runner%201982",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/iD88HsailBEKNBoxj82CxtXesHX.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/78",
     "genres": [
       "Science Fiction",
@@ -1216,7 +1254,10 @@
       "thriller"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -1241,7 +1282,7 @@
     "year": 2000,
     "runtime": 143,
     "description": "2000 film directed by Robert Zemeckis",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cast%20Away%20-%20Logo.png",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/4GHtillFPlz9DApJov5P5WMz6r4.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/8358",
     "genres": [
       "Adventure",
@@ -1269,7 +1310,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -1294,7 +1337,7 @@
     "year": 2005,
     "runtime": 112,
     "description": "A 2005 movie with serious, conversation energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Crash%202005",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/tvGtnPrTBvulcnnemyULfRvCMEZ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1640",
     "genres": [
       "Drama"
@@ -1323,7 +1366,8 @@
       "social issues"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.2,
     "mood_scores": {
@@ -1348,7 +1392,7 @@
     "year": 2013,
     "runtime": 98,
     "description": "A 2013 movie with funny, light energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Despicable%20Me%202%202013",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/e9uMneUxEN8vb3lS2wU9Pie597B.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/93456",
     "genres": [
       "Animation",
@@ -1380,7 +1424,10 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 6.9,
     "mood_scores": {
@@ -1405,7 +1452,7 @@
     "year": 2024,
     "runtime": 95,
     "description": "A 2024 movie with funny, light energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Despicable%20Me%204%202024",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/t8fh33Rx3YithmYJ2xqAjdVsBUh.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/519182",
     "genres": [
       "Animation",
@@ -1436,7 +1483,10 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 6.7,
     "mood_scores": {
@@ -1461,7 +1511,7 @@
     "year": 1954,
     "runtime": 105,
     "description": "1954 film by Alfred Hitchcock",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dial%20M%20for%20Murder%20%281954%29%20trailer%203.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/sPXTBbmgqdeUJyMpPuprPOzkako.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/521",
     "genres": [
       "Thriller",
@@ -1495,6 +1545,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.0,
@@ -1520,7 +1571,7 @@
     "year": 1990,
     "runtime": 124,
     "description": "A 1990 movie with action, familiar energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Die%20Hard%202%201990",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/mdB97eGzcIbQtpxyQuWq25a38v4.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1573",
     "genres": [
       "Action",
@@ -1550,7 +1601,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.0,
     "mood_scores": {
@@ -1575,7 +1627,7 @@
     "year": 1995,
     "runtime": 190,
     "description": "A 1995 movie with romantic, musical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Dilwale%20Dulhania%20Le%20Jayenge%201995",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/mZTE5SrxAEhgeM3sWLXNhRTjiGc.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/19404",
     "genres": [
       "Comedy",
@@ -1608,7 +1660,10 @@
       "subtitled"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.5,
     "mood_scores": {
@@ -1633,7 +1688,7 @@
     "year": 2001,
     "runtime": 114,
     "description": "2001 film directed by Richard Kelly",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Donnie%20Darko%20logo.png",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/yPtjm9QVsXLMsrYFEFZGzdXqsbz.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/141",
     "genres": [
       "Fantasy",
@@ -1668,7 +1723,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -1693,7 +1750,7 @@
     "year": 1964,
     "runtime": 95,
     "description": "1964 British satire film directed by Stanley Kubrick",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20Strangelove%20-%20General%20Buck%20Turgidson.png",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/vdlxdhKMylSyk75QsSfs4zsPLso.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/935",
     "genres": [
       "Comedy",
@@ -1726,7 +1783,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -1751,7 +1810,7 @@
     "year": 2021,
     "runtime": 155,
     "description": "A 2021 movie with dense, slow energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Dune%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/34Hr4bEzF30jd6sEvI4HihEUEI8.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/438631",
     "genres": [
       "Science Fiction",
@@ -1790,7 +1849,8 @@
       "slow"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -1815,7 +1875,7 @@
     "year": 2024,
     "runtime": 166,
     "description": "A 2024 movie with dense, epic energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Dune%3A%20Part%20Two%202024",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/zYLP7Uiqz6XqoiQLAu4XQ6DRUMz.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/693134",
     "genres": [
       "Science Fiction",
@@ -1855,7 +1915,9 @@
       "visual"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -1880,7 +1942,7 @@
     "year": 1990,
     "runtime": 105,
     "description": "1990 film directed by Tim Burton",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward%20Scissorhands%20%288229090895%29.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/tIBPewcePmv3AxL5cdabt2H9Kn0.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/162",
     "genres": [
       "Fantasy",
@@ -1915,7 +1977,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -1940,7 +2004,7 @@
     "year": 2021,
     "runtime": 102,
     "description": "A 2021 movie with feel-good, musical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Encanto%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/oBdS1Jap1wwuH166b8nZNZKSlml.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/568124",
     "genres": [
       "Animation",
@@ -1979,7 +2043,8 @@
       "stephanie beatriz"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -2004,7 +2069,7 @@
     "year": 2004,
     "runtime": 108,
     "description": "A 2004 movie with mind-bending, romantic energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Eternal%20Sunshine%20of%20the%20Spotless%20Mind%202004",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/dlik49oopcyDgMmrASXlS4q8Dp5.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/38",
     "genres": [
       "Science Fiction",
@@ -2036,7 +2101,8 @@
       "science fiction"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -2061,7 +2127,7 @@
     "year": 2022,
     "runtime": 140,
     "description": "A 2022 movie with weird, mind-bending energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Everything%20Everywhere%20All%20at%20Once%202022",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/kiros9XpKnh6bzC4sfZhtHaQ0Y7.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/545611",
     "genres": [
       "Action",
@@ -2108,7 +2174,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -2133,7 +2200,7 @@
     "year": 2015,
     "runtime": 108,
     "description": "2014 film directed by Alex Garland",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Ex-machina-uk-poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/3w5SKDygaRrZDivTeYhPKa2L0Ru.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/264660",
     "genres": [
       "Drama",
@@ -2161,6 +2228,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.6,
@@ -2186,7 +2254,7 @@
     "year": 1986,
     "runtime": 103,
     "description": "A 1986 movie with funny, feel-good energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Ferris%20Bueller%27s%20Day%20Off%201986",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/xm2FEDBxvPIpG6mEiBFy5gjUWIB.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/9377",
     "genres": [
       "Comedy"
@@ -2211,7 +2279,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -2236,7 +2305,7 @@
     "year": 1999,
     "runtime": 139,
     "description": "A 1999 movie with dark, philosophical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Fight%20Club%201999",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/5sLBZtBzmL9Xd5MdGyqymgM9kPY.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/550",
     "genres": [
       "Drama",
@@ -2284,7 +2353,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -2309,7 +2379,7 @@
     "year": 2003,
     "runtime": 100,
     "description": "2003 animated film",
-    "poster_url": "https://placehold.co/500x750/png?text=Finding%20Nemo%202003",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/39h2Zr5j4E6VWlm1enBGba25FFU.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/12",
     "genres": [
       "Animation",
@@ -2343,6 +2413,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.0,
@@ -2368,7 +2439,7 @@
     "year": 1994,
     "runtime": 142,
     "description": "1994 film directed by Robert Zemeckis",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/zUWRCzac72YuO9k5kEWSe0aGbs7.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/13",
     "genres": [
       "Comedy",
@@ -2416,6 +2487,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.5,
@@ -2441,7 +2513,7 @@
     "year": 2013,
     "runtime": 102,
     "description": "A 2013 movie with cozy, musical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Frozen%202013",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/1PoFoMOVPdOveqdpS1fx8JQnw8U.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/109445",
     "genres": [
       "Animation",
@@ -2481,7 +2553,9 @@
       "musical"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 7.2,
     "mood_scores": {
@@ -2506,7 +2580,7 @@
     "year": 1987,
     "runtime": 117,
     "description": "A 1987 movie with dark, satirical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Full%20Metal%20Jacket%201987",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/hi9TcrQZ6HjFoNMhgnxTM7wF4Gy.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/600",
     "genres": [
       "Drama",
@@ -2538,7 +2612,9 @@
       "war"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -2563,7 +2639,7 @@
     "year": 2014,
     "runtime": 135,
     "description": "2014 film directed by David Ayer",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/M4A2E8%20Sherman%20Fury%20Tank%20Museum%20Bovington%2019-05-2017%2010-55-23.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/8vctPE05o44k4RnM2HK4sC3uUBW.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/228150",
     "genres": [
       "War",
@@ -2594,7 +2670,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.5,
     "mood_scores": {
@@ -2619,7 +2697,7 @@
     "year": 2000,
     "runtime": 155,
     "description": "A 2000 movie with epic, dark energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Gladiator%202000",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/103TWtxYiPkVWiULjh1mo6x3VjZ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/98",
     "genres": [
       "Action",
@@ -2651,7 +2729,9 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -2676,7 +2756,7 @@
     "year": 2014,
     "runtime": 121,
     "description": "2014 film directed by James Gunn",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/3/33/Guardians_of_the_Galaxy_%28film%29_poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/9pbW0r2YIkyWCOieSAUPrmS9cDp.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/118340",
     "genres": [
       "Action",
@@ -2718,6 +2798,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.9,
@@ -2743,7 +2824,7 @@
     "year": 2020,
     "runtime": 160,
     "description": "A 2020 movie with musical, dense energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Hamilton%202020",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/2bVmhu9FBx8AIoTUEQKZQIEEUjf.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/556574",
     "genres": [
       "History",
@@ -2781,7 +2862,8 @@
       "uplifting"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -2806,7 +2888,7 @@
     "year": 1996,
     "runtime": 92,
     "description": "A 1996 movie with funny, sports energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Happy%20Gilmore%201996",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/umC9J6uBXf5slB7jmdgdIkfOfWq.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/9614",
     "genres": [
       "Comedy"
@@ -2846,7 +2928,8 @@
       "underdog"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.6,
     "mood_scores": {
@@ -2871,7 +2954,7 @@
     "year": 2001,
     "runtime": 152,
     "description": "2001 film directed by Chris Columbus",
-    "poster_url": "https://placehold.co/500x750/png?text=Harry%20Potter%20and%20the%20Philosopher%27s%20Stone%202001",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/nKspzM3rVJASkT4CvZvuj9KDT7l.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/671",
     "genres": [
       "Adventure",
@@ -2912,6 +2995,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.9,
@@ -2937,7 +3021,7 @@
     "year": 2016,
     "runtime": 127,
     "description": "2016 film directed by Theodore Melfi",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Katherine%20Johnson%20at%20NASA%2C%20in%201966.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/5vcKIRgaGI2IBXCid0M5TqABnrd.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/381284",
     "genres": [
       "Drama",
@@ -2975,6 +3059,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.0,
@@ -3000,7 +3085,7 @@
     "year": 2000,
     "runtime": 104,
     "description": "A 2000 movie with cozy, holiday energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=How%20the%20Grinch%20Stole%20Christmas%202000",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/egfaghCwHDhQgag12Eix0eY4NbN.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/8871",
     "genres": [
       "Family",
@@ -3034,7 +3119,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -3059,7 +3145,7 @@
     "year": 2010,
     "runtime": 98,
     "description": "A 2010 movie with cozy, adventure energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=How%20to%20Train%20Your%20Dragon%202010",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/fHqXIQsntmf1zZwtLnsTxRLXg92.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/10191",
     "genres": [
       "Fantasy",
@@ -3093,7 +3179,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -3118,7 +3205,7 @@
     "year": 2009,
     "runtime": 94,
     "description": "2009 animated film",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ice%20Age%20Dawn%20of%20the%20Dinosaurs%20logo.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/lIbYpUjwGTk0FZOSB3UfGZtNsJc.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/8355",
     "genres": [
       "Animation",
@@ -3152,7 +3239,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -3177,7 +3266,7 @@
     "year": 2006,
     "runtime": 84,
     "description": "A 2006 movie with satirical, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Idiocracy%202006",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/dNXacFmpAuq0uKBSsHDpS1LQlMP.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/7512",
     "genres": [
       "Comedy",
@@ -3211,7 +3300,9 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 6.6,
     "mood_scores": {
@@ -3236,7 +3327,7 @@
     "year": 2010,
     "runtime": 148,
     "description": "2010 film directed by Christopher Nolan",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/t5WUY5ZSxwVIVExaMZmmIj88BKA.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/27205",
     "genres": [
       "Action",
@@ -3281,6 +3372,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.4,
@@ -3306,7 +3398,7 @@
     "year": 2015,
     "runtime": 95,
     "description": "A 2015 movie with feel-good, emotional energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Inside%20Out%202015",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/3VIIECdikqFTMCkcZey8gt1xegx.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/150540",
     "genres": [
       "Animation",
@@ -3340,7 +3432,9 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -3365,7 +3459,7 @@
     "year": 2014,
     "runtime": 169,
     "description": "A 2014 movie with mind-bending, emotional energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Interstellar%202014",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/hHdhfkkzt0Mwec33Ux177Z7CO8w.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/157336",
     "genres": [
       "Adventure",
@@ -3409,7 +3503,9 @@
       "time dilation"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -3434,7 +3530,7 @@
     "year": 2013,
     "runtime": 130,
     "description": "A 2013 movie with superhero, accessible energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Iron%20Man%203%202013",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/h0vJ6sTYWQmqenNqRa1IiW1t0Ys.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/68721",
     "genres": [
       "Action",
@@ -3466,7 +3562,9 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 6.9,
     "mood_scores": {
@@ -3491,7 +3589,7 @@
     "year": 1946,
     "runtime": 130,
     "description": "1946 film directed by Frank Capra",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/James%20Stewart%20It%27s%20a%20Wonderful%20Life%20Still.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/xaApRFL0jvzNCQiy9F40Qb9w4YI.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1585",
     "genres": [
       "Drama",
@@ -3525,6 +3623,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.3,
@@ -3550,7 +3649,7 @@
     "year": 2019,
     "runtime": 131,
     "description": "A 2019 movie with dark, stylized energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=John%20Wick%3A%20Chapter%203%20-%20Parabellum%202019",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/rXdNL3NhmDZ8w4scJYxUDSpaJz.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/458156",
     "genres": [
       "Action",
@@ -3581,7 +3680,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.4,
     "mood_scores": {
@@ -3606,7 +3706,7 @@
     "year": 2023,
     "runtime": 170,
     "description": "A 2023 movie with dark, stylized energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=John%20Wick%3A%20Chapter%204%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/uDFv0wYODTdRUvljRMs3LaX9nq3.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/603692",
     "genres": [
       "Action",
@@ -3640,7 +3740,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -3665,7 +3766,7 @@
     "year": 2019,
     "runtime": 122,
     "description": "A 2019 movie with dark, character-study energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Joker%202019",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/t3ZtGpIqoQgMY5hMHSLJSD8aguU.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/475557",
     "genres": [
       "Crime",
@@ -3709,7 +3810,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -3734,7 +3836,7 @@
     "year": 2017,
     "runtime": 119,
     "description": "A 2017 movie with funny, light energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Jumanji%3A%20Welcome%20to%20the%20Jungle%202017",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/AWVWOWfuTmY3uusIsIQ2riDg9T.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/353486",
     "genres": [
       "Adventure",
@@ -3771,7 +3873,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -3796,7 +3899,7 @@
     "year": 1993,
     "runtime": 127,
     "description": "A 1993 movie with familiar, thrilling energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Jurassic%20Park%201993",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/zgvLWNSKBrufJM8OAtVxJ2s7Nf8.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/329",
     "genres": [
       "Adventure",
@@ -3824,7 +3927,8 @@
       "thrilling"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -3849,7 +3953,7 @@
     "year": 2016,
     "runtime": 128,
     "description": "2016 film directed by Damien Chazelle",
-    "poster_url": "https://placehold.co/500x750/png?text=La%20La%20Land%202016",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/68NhXMQJTYfXaaNRDDD91yO27M2.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/313369",
     "genres": [
       "Comedy",
@@ -3890,6 +3994,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.9,
@@ -3915,7 +4020,7 @@
     "year": 2002,
     "runtime": 85,
     "description": "A 2002 movie with cozy, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Lilo%20%26%20Stitch%202002",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/7pSdc2cuvlDrlR5nqlq4bEU1hYa.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/11544",
     "genres": [
       "Animation",
@@ -3950,7 +4055,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.5,
     "mood_scores": {
@@ -3975,7 +4081,7 @@
     "year": 2006,
     "runtime": 102,
     "description": "A 2006 movie with funny, warm energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Little%20Miss%20Sunshine%202006",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/7ZLfmBsxiXqlAemvbmvoBumR3GT.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/773",
     "genres": [
       "Comedy",
@@ -4002,7 +4108,8 @@
       "warm"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -4027,7 +4134,7 @@
     "year": 2003,
     "runtime": 102,
     "description": "A 2003 movie with quiet, melancholy energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Lost%20in%20Translation%202003",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/r1v1W6yxdkan87xN0AoRjn5B3s4.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/153",
     "genres": [
       "Drama",
@@ -4067,7 +4174,8 @@
       "sofia coppola"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.4,
     "mood_scores": {
@@ -4092,7 +4200,7 @@
     "year": 2003,
     "runtime": 135,
     "description": "A 2003 movie with cozy, romantic energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Love%20Actually%202003",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/otWR0kEEMfnBz9C0eXtG7C3R8sv.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/508",
     "genres": [
       "Comedy",
@@ -4123,7 +4231,8 @@
       "romantic"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.1,
     "mood_scores": {
@@ -4148,7 +4257,7 @@
     "year": 2021,
     "runtime": 95,
     "description": "A 2021 movie with cozy, summer energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Luca%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/zVSIHRDozxYRWFV0o3b4qm8BxzI.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/508943",
     "genres": [
       "Animation",
@@ -4183,7 +4292,8 @@
       "summer"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -4208,7 +4318,7 @@
     "year": 2015,
     "runtime": 121,
     "description": "2015 film directed by George Miller",
-    "poster_url": "https://placehold.co/500x750/png?text=Mad%20Max%3A%20Fury%20Road%202015",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/6zI7lI5Usf5z6wXH9KPWvGWvKS7.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/76341",
     "genres": [
       "Action",
@@ -4248,6 +4358,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.6,
@@ -4273,7 +4384,7 @@
     "year": 2023,
     "runtime": 116,
     "description": "A 2023 movie with silly, light energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Meg%202%3A%20The%20Trench%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/peRtIVwkHp3BlotCs0u7qqFeouo.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/615656",
     "genres": [
       "Action",
@@ -4310,7 +4421,9 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 5.8,
     "mood_scores": {
@@ -4335,7 +4448,7 @@
     "year": 2000,
     "runtime": 113,
     "description": "2000 film by Christopher Nolan",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Memento.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/qaXfDrZCdd3wix2XYor5HDDpFrT.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/77",
     "genres": [
       "Mystery",
@@ -4366,7 +4479,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -4391,7 +4506,7 @@
     "year": 1997,
     "runtime": 98,
     "description": "A 1997 movie with funny, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Men%20in%20Black%201997",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/ebkJnaXRREQEzd3yMKuEDC827We.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/607",
     "genres": [
       "Action",
@@ -4432,7 +4547,9 @@
       "will smith"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 7.2,
     "mood_scores": {
@@ -4457,7 +4574,7 @@
     "year": 2004,
     "runtime": 132,
     "description": "2004 film by Clint Eastwood",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maggie%27%20boxing%20gloves%20%28Million%20dollar%20baby%29%20Warner%20Bros.%20Studio%20Tour%20Hollywood.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/h91jhpl63wxNGNl18adInAsn3YV.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/70",
     "genres": [
       "Drama"
@@ -4483,7 +4600,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -4508,7 +4627,7 @@
     "year": 2011,
     "runtime": 133,
     "description": "A 2011 movie with action, accessible energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Mission%3A%20Impossible%20-%20Ghost%20Protocol%202011",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/jE6fxW1l7Of8CTb9A0gxVsbC3w7.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/56292",
     "genres": [
       "Action",
@@ -4540,7 +4659,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.1,
     "mood_scores": {
@@ -4565,7 +4685,7 @@
     "year": 1936,
     "runtime": 87,
     "description": "1936 film directed by Charlie Chaplin",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Times%20poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/8UNesp5e8cz8ODqnOgXaJAu0uGe.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/3082",
     "genres": [
       "Comedy",
@@ -4595,7 +4715,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -4620,7 +4742,7 @@
     "year": 2001,
     "runtime": 92,
     "description": "A 2001 movie with cozy, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Monsters%2C%20Inc.%202001",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/5QEIlVzqltjncOpAcL55U3fbWDo.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/585",
     "genres": [
       "Animation",
@@ -4652,7 +4774,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -4677,7 +4800,7 @@
     "year": 2012,
     "runtime": 94,
     "description": "A 2012 movie with quirky, cozy energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Moonrise%20Kingdom%202012",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/nLhmbkGbTdgrXNJgHIzoqqfXkZX.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/77454",
     "genres": [
       "Comedy",
@@ -4717,7 +4840,8 @@
       "wes anderson"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -4742,7 +4866,7 @@
     "year": 2001,
     "runtime": 128,
     "description": "A 2001 movie with romantic, musical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Moulin%20Rouge%21%202001",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/2kjM5CUZRIU5yOANUowrbJcRL9L.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/824",
     "genres": [
       "Drama",
@@ -4773,7 +4897,9 @@
       "romantic"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -4798,7 +4924,7 @@
     "year": 1968,
     "runtime": 96,
     "description": "1968 American independent zombie horror film by George A. Romero",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Night%20Of%20The%20Living%20Dead%20trailer%20screenshot.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/duPDqFFRkwKcGfVibBvtVKA7VNh.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/10331",
     "genres": [
       "Horror",
@@ -4829,7 +4955,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -4854,7 +4982,7 @@
     "year": 2023,
     "runtime": 101,
     "description": "A 2023 movie with funny, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Nimona%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/2NQljeavtfl22207D1kxLpa4LS3.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/961323",
     "genres": [
       "Animation",
@@ -4889,7 +5017,9 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -4914,7 +5044,7 @@
     "year": 2007,
     "runtime": 85,
     "description": "A 2007 movie with cozy, romantic energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Once%202007",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/wh2RqEA48Bkn9xJatax90aeI6bq.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/5723",
     "genres": [
       "Drama",
@@ -4948,7 +5078,8 @@
       "short runtime"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.4,
     "mood_scores": {
@@ -4973,7 +5104,7 @@
     "year": 2023,
     "runtime": 181,
     "description": "A 2023 movie with dense, historical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Oppenheimer%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/9AiHV08v8RyyuHcO5wuTaTXBxfe.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/872585",
     "genres": [
       "Drama",
@@ -5017,7 +5148,8 @@
       "war"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -5042,7 +5174,7 @@
     "year": 2006,
     "runtime": 118,
     "description": "A 2006 movie with dark, subtitled energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Pan%27s%20Labyrinth%202006",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/1MMCuEPfaXzSjvuGizyHLRu5Fer.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1417",
     "genres": [
       "Fantasy",
@@ -5073,7 +5205,8 @@
       "war"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -5098,7 +5231,7 @@
     "year": 2019,
     "runtime": 133,
     "description": "A 2019 movie with dark, satirical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Parasite%202019",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/hoqe3leVhHBgboB6G1bv1kB8K4p.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/496243",
     "genres": [
       "Comedy",
@@ -5144,7 +5277,8 @@
       "thriller"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.5,
     "mood_scores": {
@@ -5169,7 +5303,7 @@
     "year": 2023,
     "runtime": 142,
     "description": "A 2023 movie with weird, dark energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Poor%20Things%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/37x8UdSpwoTOva5AUdnHw5VCDD1.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/792307",
     "genres": [
       "Science Fiction",
@@ -5217,7 +5351,8 @@
       "yorgos lanthimos"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -5242,7 +5377,7 @@
     "year": 2022,
     "runtime": 107,
     "description": "A 2022 movie with period, serious energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Prizefighter%3A%20The%20Life%20of%20Jem%20Belcher%202022",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/4BbABYtaTWamLpSq4Z0klUGdKx0.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/943822",
     "genres": [
       "History",
@@ -5273,7 +5408,8 @@
       "sports"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.3,
     "mood_scores": {
@@ -5298,7 +5434,7 @@
     "year": 1994,
     "runtime": 154,
     "description": "1994 film by Quentin Tarantino",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dortmund-Graffiti-IMG%206604.JPG",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/hOg9USqmQmglmr5kGvpyg1XkhqN.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/680",
     "genres": [
       "Crime",
@@ -5353,6 +5489,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.5,
@@ -5378,7 +5515,7 @@
     "year": 2022,
     "runtime": 103,
     "description": "A 2022 movie with feel-good, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Puss%20in%20Boots%3A%20The%20Last%20Wish%202022",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/kav9SgYBGE7ikJXO5ktlEILJYPI.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/315162",
     "genres": [
       "Animation",
@@ -5413,7 +5550,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -5438,7 +5576,7 @@
     "year": 2002,
     "runtime": 100,
     "description": "A 2002 movie with dark, action energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Resident%20Evil%202002",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/tI0DZIzU3J1qr20iYTodcQjenh6.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/7737",
     "genres": [
       "Horror",
@@ -5473,7 +5611,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.6,
     "mood_scores": {
@@ -5498,7 +5637,7 @@
     "year": 1983,
     "runtime": 132,
     "description": "A 1983 movie with adventure, feel-good energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Return%20of%20the%20Jedi%201983",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/xwwbeCWW1jMSDPfRPJp8X4oySPr.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1892",
     "genres": [
       "Adventure",
@@ -5530,7 +5669,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -5555,7 +5695,7 @@
     "year": 1998,
     "runtime": 93,
     "description": "A 1998 movie with quirky, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Rushmore%201998",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/hSJ6swahAuZ8wM96lHDTwQPXUvZ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/11545",
     "genres": [
       "Comedy",
@@ -5582,7 +5722,8 @@
       "quirky"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.4,
     "mood_scores": {
@@ -5607,7 +5748,7 @@
     "year": 1993,
     "runtime": 195,
     "description": "A 1993 movie with heavy, historical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Schindler%27s%20List%201993",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/lJiLP05Pm72fVEKVH3Z2bNNYHQv.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/424",
     "genres": [
       "Drama",
@@ -5644,7 +5785,8 @@
       "war"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.6,
     "mood_scores": {
@@ -5669,7 +5811,7 @@
     "year": 1995,
     "runtime": 127,
     "description": "A 1995 movie with dark, disturbing energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Se7en%201995",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/79tFIrbMweqs52PxForIRJRFCIW.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/807",
     "genres": [
       "Crime",
@@ -5715,7 +5857,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -5740,7 +5883,7 @@
     "year": 2021,
     "runtime": 132,
     "description": "A 2021 movie with action, accessible energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Shang-Chi%20and%20the%20Legend%20of%20the%20Ten%20Rings%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/AjXzHBNlmCXZnvpONbUhGtgiUiA.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/566525",
     "genres": [
       "Action",
@@ -5771,7 +5914,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.5,
     "mood_scores": {
@@ -5796,7 +5940,7 @@
     "year": 2012,
     "runtime": 122,
     "description": "A 2012 movie with romantic, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Silver%20Linings%20Playbook%202012",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/wDjypOAgMDriKcEePXQweIW8otb.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/82693",
     "genres": [
       "Drama",
@@ -5834,7 +5978,8 @@
       "romantic"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.1,
     "mood_scores": {
@@ -5859,7 +6004,7 @@
     "year": 1952,
     "runtime": 103,
     "description": "1952 film directed by Gene Kelly and Stanley Donen",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singin%27%20In%20The%20Rain%20Lobby%20Card%201%20%28cropped%29.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/6Gf7Zlyg6gzVPe1bfTr7yOQv14T.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/872",
     "genres": [
       "Comedy",
@@ -5894,6 +6039,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.1,
@@ -5919,7 +6065,7 @@
     "year": 2000,
     "runtime": 104,
     "description": "A 2000 movie with funny, crime energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Snatch%202000",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/xHoPeUUI0lveDOyCEjKhxv2BSGo.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/107",
     "genres": [
       "Crime",
@@ -5951,7 +6097,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -5976,7 +6123,7 @@
     "year": 2020,
     "runtime": 101,
     "description": "A 2020 movie with philosophical, warm energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Soul%202020",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/6jmppcaubzLF8wkXM36ganVISCo.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/508442",
     "genres": [
       "Animation",
@@ -6012,7 +6159,8 @@
       "warm"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -6037,7 +6185,7 @@
     "year": 2023,
     "runtime": 140,
     "description": "A 2023 movie with visual, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Spider-Man%3A%20Across%20the%20Spider-Verse%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/6jYQM7zldTF0q6Ky1XbIJCNsS2L.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/569094",
     "genres": [
       "Animation",
@@ -6078,7 +6226,8 @@
       "visual"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -6103,7 +6252,7 @@
     "year": 2018,
     "runtime": 117,
     "description": "A 2018 movie with funny, feel-good energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Spider-Man%3A%20Into%20the%20Spider-Verse%202018",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/ccuU3jptz6PWwvLrMmTqk8ESaUy.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/324857",
     "genres": [
       "Animation",
@@ -6144,7 +6293,8 @@
       "visual"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -6169,7 +6319,7 @@
     "year": 1977,
     "runtime": 121,
     "description": "A 1977 movie with adventure, familiar energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Star%20Wars%201977",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/crUUE14AROxNWsMdmyyqZNcUB6L.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/11",
     "genres": [
       "Adventure",
@@ -6213,7 +6363,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -6238,7 +6389,7 @@
     "year": 1976,
     "runtime": 114,
     "description": "A 1976 movie with dark, lonely energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Taxi%20Driver%201976",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/8FbDLFGRPdWaEz5hWC9wyG0d2il.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/103",
     "genres": [
       "Crime",
@@ -6275,7 +6426,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -6300,7 +6452,7 @@
     "year": 2012,
     "runtime": 107,
     "description": "2012 film directed by Seth MacFarlane",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ted%20%28film%29%20logo.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/5mMZ6vNu1YzUyMcanOzYsxyt95y.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/72105",
     "genres": [
       "Comedy",
@@ -6347,6 +6499,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 6.4,
@@ -6372,7 +6525,7 @@
     "year": 2014,
     "runtime": 101,
     "description": "A 2014 movie with light, familiar energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Teenage%20Mutant%20Ninja%20Turtles%202014",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/b0Do93IEW8UeIqCbHHztT24bAep.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/98566",
     "genres": [
       "Science Fiction",
@@ -6408,7 +6561,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 5.9,
     "mood_scores": {
@@ -6433,7 +6587,7 @@
     "year": 1991,
     "runtime": 137,
     "description": "A 1991 movie with thrilling, familiar energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Terminator%202%3A%20Judgment%20Day%201991",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/4VqVoURCh0hGvnvKq3148SjePIo.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/280",
     "genres": [
       "Action",
@@ -6466,7 +6620,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -6491,7 +6646,7 @@
     "year": 2012,
     "runtime": 143,
     "description": "2012 film directed by Joss Whedon",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/3wfcxLkMrcm4HHZ56hLhzoWFiTC.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/24428",
     "genres": [
       "Science Fiction",
@@ -6531,6 +6686,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.7,
@@ -6556,7 +6712,7 @@
     "year": 1946,
     "runtime": 172,
     "description": "1946 American drama film directed by William Wyler",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Best%20Years%20of%20Our%20Lives%20%281946%20poster%29.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/mjLL4Z1F6xtDAFxGt8XDRKxMS1P.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/887",
     "genres": [
       "Drama",
@@ -6595,6 +6751,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.8,
@@ -6620,7 +6777,7 @@
     "year": 1998,
     "runtime": 117,
     "description": "A 1998 movie with funny, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Big%20Lebowski%201998",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/A5FjOdZ8V8d1eAlBggslIz4qCkn.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/115",
     "genres": [
       "Comedy",
@@ -6672,7 +6829,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -6697,7 +6855,7 @@
     "year": 1980,
     "runtime": 133,
     "description": "1980 film directed by John Landis",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blues%20Brothers.JPG",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/jnP40KmNtF1PIdujkB6BUDrDDsI.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/525",
     "genres": [
       "Music",
@@ -6737,6 +6895,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.7,
@@ -6762,7 +6921,7 @@
     "year": 1985,
     "runtime": 98,
     "description": "A 1985 movie with familiar, warm energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Breakfast%20Club%201985",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/gp4zlj7wgbiofLMNsTPndMuO3PN.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/2108",
     "genres": [
       "Comedy",
@@ -6789,7 +6948,8 @@
       "warm"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -6814,7 +6974,7 @@
     "year": 2013,
     "runtime": 112,
     "description": "A 2013 movie with dark, scary energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Conjuring%202013",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/pO6PL9Uw2fafe3MaF73FrgjH9tL.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/138843",
     "genres": [
       "Horror",
@@ -6842,7 +7002,9 @@
       "thriller"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 7.5,
     "mood_scores": {
@@ -6867,7 +7029,7 @@
     "year": 2008,
     "runtime": 166,
     "description": "A 2008 movie with romantic, melancholy energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Curious%20Case%20of%20Benjamin%20Button%202008",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/cbh6mV3BMPHmYd2diXjxicnoDF5.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/4922",
     "genres": [
       "Drama",
@@ -6900,7 +7062,8 @@
       "romantic"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -6925,7 +7088,7 @@
     "year": 2008,
     "runtime": 152,
     "description": "A 2008 movie with dark, superhero energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Dark%20Knight%202008",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/z1DfRQf2CgnROyhVZ6ch8FbWt71.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/155",
     "genres": [
       "Drama",
@@ -6974,7 +7137,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.5,
     "mood_scores": {
@@ -6999,7 +7163,7 @@
     "year": 2012,
     "runtime": 165,
     "description": "2012 superhero film by Christopher Nolan",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batman%203.JPG",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/9NyCuhyvFKTqGRLcr4r8fWXnu9v.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/49026",
     "genres": [
       "Action",
@@ -7034,7 +7198,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -7059,7 +7225,7 @@
     "year": 2006,
     "runtime": 151,
     "description": "2006 film directed by Martin Scorsese",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Departed%20logo.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/zqGdG5pcK7WZFgP9ynXd8jM7Bic.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1422",
     "genres": [
       "Drama",
@@ -7100,6 +7266,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.2,
@@ -7125,7 +7292,7 @@
     "year": 1980,
     "runtime": 124,
     "description": "A 1980 movie with adventure, familiar energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Empire%20Strikes%20Back%201980",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/mi08uIh7ZqYlJEMrc5l2986geSU.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1891",
     "genres": [
       "Adventure",
@@ -7157,7 +7324,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -7182,7 +7350,7 @@
     "year": 2024,
     "runtime": 101,
     "description": "A 2024 movie with light, family energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Garfield%20Movie%202024",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/odjQBRrXhTvutv7W3VURATn4ysm.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/748783",
     "genres": [
       "Animation",
@@ -7213,7 +7381,9 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -7238,7 +7408,7 @@
     "year": 1926,
     "runtime": 79,
     "description": "1926 film directed by Clyde Bruckman and Buster Keaton",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20General%2C%20front.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/tiiBh045iOo6xUh2EbGNDj7f9ZD.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/961",
     "genres": [
       "Comedy",
@@ -7273,7 +7443,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -7298,7 +7470,7 @@
     "year": 1972,
     "runtime": 175,
     "description": "1972 film directed by Francis Ford Coppola",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Godfather%20logo.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/uumEbSnYqeV1oennyVx8DPVjujF.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/238",
     "genres": [
       "Crime",
@@ -7331,6 +7503,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.7,
@@ -7350,14 +7523,14 @@
     "avoid_if": "Avoid if you want something gentle, sunny, or low-stakes."
   },
   {
-    "id": "tmdb_108978",
+    "id": "tmdb_120467",
     "title": "The Grand Budapest Hotel",
     "type": "movie",
     "year": 2014,
     "runtime": 100,
     "description": "A 2014 movie with quirky, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Grand%20Budapest%20Hotel%202014",
-    "tmdb_url": "https://www.themoviedb.org/movie/108978",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/cnYv3px6xOUryhCvasKO40v3fPD.jpg",
+    "tmdb_url": "https://www.themoviedb.org/movie/120467",
     "genres": [
       "Comedy",
       "Drama"
@@ -7384,7 +7557,8 @@
       "stylized"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -7409,7 +7583,7 @@
     "year": 1999,
     "runtime": 189,
     "description": "A 1999 movie with emotional, dark energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Green%20Mile%201999",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/frsZNikjMbp1gfidAl3zm1PAMHk.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/497",
     "genres": [
       "Fantasy",
@@ -7444,7 +7618,9 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public",
+      "wikipedia"
     ],
     "rating": 8.5,
     "mood_scores": {
@@ -7469,7 +7645,7 @@
     "year": 2009,
     "runtime": 100,
     "description": "2009 film by Todd Phillips",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20hangover.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/cwoVDVzJuGAD3OAji9OkHENrUB0.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/18785",
     "genres": [
       "Comedy"
@@ -7512,7 +7688,9 @@
     ],
     "data_sources": [
       "offline_seed",
-      "wikidata"
+      "tmdb_public",
+      "wikidata",
+      "wikipedia"
     ],
     "rating": 7.3,
     "mood_scores": {
@@ -7537,7 +7715,7 @@
     "year": 1961,
     "runtime": 134,
     "description": "1961 film by Robert Rossen",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Hustler%201961%20screenshot%206.png",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/1haqcle0DesG7jBF2TAc41i5w6W.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/990",
     "genres": [
       "Drama"
@@ -7563,6 +7741,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.7,
@@ -7588,7 +7767,7 @@
     "year": 2011,
     "runtime": 113,
     "description": "A 2011 movie with feel-good, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Intouchables%202011",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/2VhCnmycro2ySRHYtaqTWrdSjBt.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/77338",
     "genres": [
       "Drama",
@@ -7616,7 +7795,8 @@
       "warm"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -7641,7 +7821,7 @@
     "year": 2019,
     "runtime": 118,
     "description": "A 2019 movie with familiar, family energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Lion%20King%202019",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/umzkw2NE36UR9IaEHLAp9dqGWsF.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/420818",
     "genres": [
       "Adventure",
@@ -7671,7 +7851,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.1,
     "mood_scores": {
@@ -7696,7 +7877,7 @@
     "year": 2006,
     "runtime": 137,
     "description": "A 2006 movie with subtitled, political energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Lives%20of%20Others%202006",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/ghdrI7Q5TbbtLjIOEspjLB4xcE4.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/582",
     "genres": [
       "Drama",
@@ -7728,7 +7909,8 @@
       "thriller"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -7753,7 +7935,7 @@
     "year": 2001,
     "runtime": 179,
     "description": "A 2001 movie with epic, cozy energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring%202001",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/k6lw7hhaMDzJ170bfZfBbnipxcW.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/120",
     "genres": [
       "Adventure",
@@ -7789,7 +7971,8 @@
       "peter jackson"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -7814,7 +7997,7 @@
     "year": 1999,
     "runtime": 136,
     "description": "1999 American science fiction action thriller film",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The.Matrix.glmatrix.1.png",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/iVmDLujHcV1zaMnaahKWn4TcCS6.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/603",
     "genres": [
       "Action",
@@ -7867,6 +8050,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 8.2,
@@ -7892,7 +8076,7 @@
     "year": 2018,
     "runtime": 113,
     "description": "2018 film by Jon Turteltaub",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Meg%20-%202018%20film.svg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/emn6QmTTqsxmibjfJkxROL4Il7M.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/345940",
     "genres": [
       "Action",
@@ -7930,6 +8114,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 6.2,
@@ -7955,7 +8140,7 @@
     "year": 2006,
     "runtime": 130,
     "description": "A 2006 movie with mystery, twist energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Prestige%202006",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/rN2eGbRpbJw8ZFVDiQfDxsknirP.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1124",
     "genres": [
       "Drama",
@@ -7986,7 +8171,8 @@
       "twist"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -8011,7 +8197,7 @@
     "year": 1991,
     "runtime": 119,
     "description": "A 1991 movie with dark, disturbing energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Silence%20of%20the%20Lambs%201991",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/yyW5OFz5r8S81R2Afj9ILiEa70w.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/274",
     "genres": [
       "Crime",
@@ -8044,7 +8230,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -8069,7 +8256,7 @@
     "year": 1999,
     "runtime": 107,
     "description": "1999 film directed by M. Night Shyamalan",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haley%20Joel%20Osment%20in%202001.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/mItbnCncatYHCwV2w7gXUw3xmxB.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/745",
     "genres": [
       "Mystery",
@@ -8100,6 +8287,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.9,
@@ -8125,7 +8313,7 @@
     "year": 2023,
     "runtime": 92,
     "description": "A 2023 movie with light, familiar energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Super%20Mario%20Bros.%20Movie%202023",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/iH0DprDjxfLQZdiKeHlll0Drx9X.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/502356",
     "genres": [
       "Animation",
@@ -8159,7 +8347,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -8184,7 +8373,7 @@
     "year": 1984,
     "runtime": 108,
     "description": "A 1984 movie with dark, cult energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Terminator%201984",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/kdYu7YJJP0uuGEuhUX5toqvBSog.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/218",
     "genres": [
       "Action",
@@ -8218,7 +8407,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.7,
     "mood_scores": {
@@ -8243,7 +8433,7 @@
     "year": 1995,
     "runtime": 106,
     "description": "A 1995 movie with mystery, twist energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Usual%20Suspects%201995",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/v15wi7bC5b0YRiOFTpq8hAdQem5.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/629",
     "genres": [
       "Drama",
@@ -8278,7 +8468,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -8303,7 +8494,7 @@
     "year": 2017,
     "runtime": 131,
     "description": "2017 film directed by Taika Waititi",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/7/7d/Thor_Ragnarok_poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/8etFULS6CRN39vvXykQH1mUD1yB.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/284053",
     "genres": [
       "Action",
@@ -8347,6 +8538,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "wikidata"
     ],
     "rating": 7.6,
@@ -8372,7 +8564,7 @@
     "year": 1997,
     "runtime": 194,
     "description": "A 1997 movie with romantic, tragic energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Titanic%201997",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/MlnPG3oxhfmuiDwcoeElQWui9m.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/597",
     "genres": [
       "Drama",
@@ -8418,7 +8610,8 @@
       "tragic"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -8443,7 +8636,7 @@
     "year": 2022,
     "runtime": 131,
     "description": "A 2022 movie with feel-good, action energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Top%20Gun%3A%20Maverick%202022",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/cvLe7YpLTsgT25FpuTD1bwgEcWZ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/361743",
     "genres": [
       "Action",
@@ -8472,7 +8665,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -8497,7 +8691,7 @@
     "year": 1995,
     "runtime": 81,
     "description": "A 1995 movie with cozy, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Toy%20Story%201995",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/om4fMx3e4xkx27sAsacoFP4WiEd.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/862",
     "genres": [
       "Animation",
@@ -8545,7 +8739,8 @@
       "tom hanks"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -8570,7 +8765,7 @@
     "year": 2010,
     "runtime": 103,
     "description": "A 2010 movie with cozy, emotional energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Toy%20Story%203%202010",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/aHxQdb3Ennws1EIraHnOS3BFjVJ.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/10193",
     "genres": [
       "Animation",
@@ -8607,7 +8802,8 @@
       "tom hanks"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.8,
     "mood_scores": {
@@ -8632,7 +8828,7 @@
     "year": 1996,
     "runtime": 94,
     "description": "A 1996 movie with dark, cult energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Trainspotting%201996",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/84uIVeFz44PgXdS1N3Rk98wyW2r.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/627",
     "genres": [
       "Drama",
@@ -8669,7 +8865,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -8694,7 +8891,7 @@
     "year": 2024,
     "runtime": 104,
     "description": "A 2024 movie with dark, creature-feature energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Under%20Paris%202024",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/9EPFqFXrDN4Qu4IWFI1tcj2ul8A.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/1001311",
     "genres": [
       "Action",
@@ -8729,7 +8926,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.0,
     "mood_scores": {
@@ -8754,7 +8952,7 @@
     "year": 2009,
     "runtime": 96,
     "description": "A 2009 movie with warm, emotional energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Up%202009",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/gOOVHWgBmpoeYXG9tGFiNOLsSWl.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/14160",
     "genres": [
       "Animation",
@@ -8788,7 +8986,8 @@
       "warm"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -8813,7 +9012,7 @@
     "year": 2018,
     "runtime": 112,
     "description": "A 2018 movie with weird, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Venom%202018",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/e8XOhZTizIl4vTzOYqaUWIhI5iC.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/335983",
     "genres": [
       "Science Fiction",
@@ -8850,7 +9049,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -8875,7 +9075,7 @@
     "year": 2021,
     "runtime": 97,
     "description": "A 2021 movie with weird, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Venom%3A%20Let%20There%20Be%20Carnage%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/ztoy8TiHu9qa22bW1DkhdNIzeF9.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/580489",
     "genres": [
       "Science Fiction",
@@ -8914,7 +9114,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -8939,7 +9140,7 @@
     "year": 2008,
     "runtime": 98,
     "description": "A 2008 movie with warm, quiet energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=WALL-E%202008",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/TPClTvyD4a8DGz7sD8si6x7QqB.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/10681",
     "genres": [
       "Animation",
@@ -8975,7 +9176,8 @@
       "warm"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -9000,7 +9202,7 @@
     "year": 2021,
     "runtime": 119,
     "description": "A 2021 movie with dark, action energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Wrath%20of%20Man%202021",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/3fJQeeF6sJ2xMtrVZecw1QowHdG.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/637649",
     "genres": [
       "Crime",
@@ -9029,7 +9231,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -9054,7 +9257,7 @@
     "year": 2012,
     "runtime": 101,
     "description": "A 2012 movie with funny, feel-good energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Wreck-It%20Ralph%202012",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/TI7IZvj006iz24MYu5YwYr6Gj7.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/82690",
     "genres": [
       "Family",
@@ -9088,7 +9291,8 @@
       "movie"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 7.3,
     "mood_scores": {
@@ -9113,7 +9317,7 @@
     "year": 2022,
     "runtime": 106,
     "description": "A 2022 movie with dark, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=X%202022",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/yuiSG2HDc6wrx4AikbwrC4MQC7l.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/760104",
     "genres": [
       "Horror",
@@ -9164,7 +9368,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.8,
     "mood_scores": {
@@ -9189,7 +9394,7 @@
     "year": 2016,
     "runtime": 144,
     "description": "A 2016 movie with superhero, accessible energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=X-Men%3A%20Apocalypse%202016",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/vsv91Fj4pxOEm2QJ96jq2EXS7QT.jpg",
     "tmdb_url": "https://www.themoviedb.org/movie/246655",
     "genres": [
       "Action",
@@ -9219,7 +9424,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tmdb_public"
     ],
     "rating": 6.5,
     "mood_scores": {
@@ -9244,7 +9450,7 @@
     "year": 2017,
     "runtime": 57,
     "description": "A 2017 tv with dark, heavy energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=13%20Reasons%20Why%202017",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/258/646815.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/66788",
     "genres": [
       "Drama",
@@ -9272,7 +9478,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 7.6,
     "mood_scores": {
@@ -9297,7 +9504,7 @@
     "year": 2011,
     "runtime": 22,
     "description": "A 2011 tv with cozy, funny energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Bob%27s%20Burgers%202011",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/589/1474468.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/32726",
     "genres": [
       "Animation",
@@ -9334,7 +9541,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.1,
     "mood_scores": {
@@ -9359,7 +9567,7 @@
     "year": 2008,
     "runtime": 47,
     "description": "A 2008 tv with dark, dense energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Breaking%20Bad%202008",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/1396",
     "genres": [
       "Drama",
@@ -9402,7 +9610,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.9,
     "mood_scores": {
@@ -9427,7 +9636,7 @@
     "year": 2019,
     "runtime": 65,
     "description": "A 2019 tv with dark, historical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Chernobyl%202019",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/193/482599.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/87108",
     "genres": [
       "Drama"
@@ -9467,7 +9676,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.7,
     "mood_scores": {
@@ -9492,7 +9702,7 @@
     "year": 1994,
     "runtime": 25,
     "description": "American sitcom (1994–2004)",
-    "poster_url": "https://placehold.co/500x750/png?text=Friends%201994",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/41/104565.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/1668",
     "genres": [
       "Comedy"
@@ -9571,7 +9781,7 @@
     "year": 2009,
     "runtime": 25,
     "description": "A 2009 tv with dense, adventure energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Fullmetal%20Alchemist%3A%20Brotherhood%202009",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/485/1214095.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/31911",
     "genres": [
       "Action & Adventure",
@@ -9607,7 +9817,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.7,
     "mood_scores": {
@@ -9632,7 +9843,7 @@
     "year": 2011,
     "runtime": 60,
     "description": "A 2011 tv with dark, dense energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Game%20of%20Thrones%202011",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/498/1245274.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/1399",
     "genres": [
       "Drama",
@@ -9686,7 +9897,8 @@
       "war"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -9711,7 +9923,7 @@
     "year": 2013,
     "runtime": 50,
     "description": "A 2013 tv with political, dark energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=House%20of%20Cards%202013",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/169/424482.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/1425",
     "genres": [
       "Drama"
@@ -9740,7 +9952,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -9765,7 +9978,7 @@
     "year": 2022,
     "runtime": 60,
     "description": "A 2022 tv with dark, dense energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=House%20of%20the%20Dragon%202022",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/627/1568449.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/94997",
     "genres": [
       "Drama",
@@ -9807,7 +10020,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.3,
     "mood_scores": {
@@ -9832,7 +10046,7 @@
     "year": 2004,
     "runtime": 43,
     "description": "A 2004 tv with mystery, rabbit-hole energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Lost%202004",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/0/1389.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/4607",
     "genres": [
       "Mystery",
@@ -9863,7 +10077,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 7.9,
     "mood_scores": {
@@ -9888,7 +10103,7 @@
     "year": 2015,
     "runtime": 52,
     "description": "A 2015 tv with dark, action energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Marvel%27s%20Daredevil%202015",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/171/429391.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/61889",
     "genres": [
       "Crime",
@@ -9920,7 +10135,8 @@
       "violence"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.2,
     "mood_scores": {
@@ -9945,7 +10161,7 @@
     "year": 2014,
     "runtime": 11,
     "description": "A 2014 tv with cozy, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Over%20the%20Garden%20Wall%202014",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/9/24252.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/61617",
     "genres": [
       "Animation",
@@ -9981,7 +10197,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.5,
     "mood_scores": {
@@ -10006,7 +10223,7 @@
     "year": 2009,
     "runtime": 22,
     "description": "American comedy television series",
-    "poster_url": "https://placehold.co/500x750/png?text=Parks%20and%20Recreation%202009",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/481/1204341.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/8592",
     "genres": [
       "Comedy"
@@ -10086,7 +10303,7 @@
     "year": 2013,
     "runtime": 23,
     "description": "A 2013 tv with funny, weird energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Rick%20and%20Morty%202013",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/626/1566363.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/60625",
     "genres": [
       "Animation",
@@ -10127,7 +10344,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.7,
     "mood_scores": {
@@ -10152,7 +10370,7 @@
     "year": 1997,
     "runtime": 22,
     "description": "A 1997 tv with funny, satirical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=South%20Park%201997",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/594/1485766.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/2190",
     "genres": [
       "Animation",
@@ -10189,7 +10407,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -10214,7 +10433,7 @@
     "year": 2016,
     "runtime": 50,
     "description": "American science fiction horror television series",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/d/d5/Stranger_Things_Book_Cover_Original_Pitch.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/66732",
     "genres": [
       "Drama",
@@ -10288,6 +10507,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "tvmaze",
       "wikidata"
     ],
@@ -10314,7 +10534,7 @@
     "year": 2007,
     "runtime": 22,
     "description": "American television sitcom (2007–2019)",
-    "poster_url": "https://upload.wikimedia.org/wikipedia/en/7/73/The_Big_Bang_Theory_Poster.jpg",
+    "poster_url": "https://media.themoviedb.org/t/p/w500/an3uTx1P0XgHPylgfPV6W7yxKAo.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/1418",
     "genres": [
       "Comedy"
@@ -10373,6 +10593,7 @@
     ],
     "data_sources": [
       "offline_seed",
+      "tmdb_public",
       "tvmaze",
       "wikidata"
     ],
@@ -10399,7 +10620,7 @@
     "year": 2019,
     "runtime": 60,
     "description": "A 2019 tv with dark, satirical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Boys%202019",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/619/1547768.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/76479",
     "genres": [
       "Sci-Fi & Fantasy",
@@ -10451,7 +10672,8 @@
       "violent"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.5,
     "mood_scores": {
@@ -10476,7 +10698,7 @@
     "year": 2016,
     "runtime": 22,
     "description": "A 2016 tv with funny, philosophical energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Good%20Place%202016",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/395/989291.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/71712",
     "genres": [
       "Comedy",
@@ -10521,7 +10743,8 @@
       "tv"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.0,
     "mood_scores": {
@@ -10546,7 +10769,7 @@
     "year": 2019,
     "runtime": 40,
     "description": "American space opera streaming television series from 2019",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%9B%BC%E8%BE%BE%E6%B4%9B%E4%BA%BA%E5%88%B0%E4%B8%8A%E6%B5%B7%E7%A7%91%E6%8A%80%E9%A6%86.png",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253498.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/82856",
     "genres": [
       "Sci-Fi & Fantasy",
@@ -10621,7 +10844,7 @@
     "year": 2005,
     "runtime": 22,
     "description": "American sitcom broadcast on NBC",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Office%202005",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/481/1204342.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/2316",
     "genres": [
       "Comedy"
@@ -10709,7 +10932,7 @@
     "year": 1989,
     "runtime": 22,
     "description": "American animated sitcom created by Matt Groening",
-    "poster_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Simpsons%20Statues%20%28cropped%29.jpg",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/588/1471731.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/456",
     "genres": [
       "Animation",
@@ -10805,7 +11028,7 @@
     "year": 2024,
     "runtime": 60,
     "description": "Across continents and decades, five brilliant friends make earth-shattering discoveries as the laws of science unravel and an existential threat emerges.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20Three-Body%20Problem%202024",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/507/1268925.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/739547",
     "genres": [
       "Drama",
@@ -10890,7 +11113,7 @@
     "year": 1993,
     "runtime": 45,
     "description": "A 1993 tv with mystery, rabbit-hole energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=The%20X-Files%201993",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253511.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/764",
     "genres": [
       "Mystery",
@@ -10924,7 +11147,8 @@
       "weird"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.4,
     "mood_scores": {
@@ -10949,7 +11173,7 @@
     "year": 2018,
     "runtime": 42,
     "description": "A 2018 tv with family, dark energy, included as an offline seed until TMDB_API_KEY is provided for official metadata.",
-    "poster_url": "https://placehold.co/500x750/png?text=Yellowstone%202018",
+    "poster_url": "https://static.tvmaze.com/uploads/images/original_untouched/545/1362616.jpg",
     "tmdb_url": "https://www.themoviedb.org/tv/73586",
     "genres": [
       "Western",
@@ -10978,7 +11202,8 @@
       "western"
     ],
     "data_sources": [
-      "offline_seed"
+      "offline_seed",
+      "tvmaze"
     ],
     "rating": 8.2,
     "mood_scores": {
