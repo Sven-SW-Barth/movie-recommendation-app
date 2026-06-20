@@ -17,9 +17,10 @@ export default async function Page() {
 
   return (
     <AppShell
-      userName={session.user.name}
       initialState={{
         activeMood: state.activeMood,
+        activeName: state.activeName ?? 'My mood',
+        activeIcon: state.activeIcon ?? 'sparkles',
         stats: state.stats,
         swipedMovieIds: state.swipedMovieIds,
       }}
