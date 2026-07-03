@@ -186,6 +186,7 @@ export function AppShell({
         )}
         {tab === 'train' && (
           <TrainTab
+            moodId={state.activeMood}
             moodName={activeMeta.name}
             stats={state.stats}
             swipedMovieIds={state.swipedMovieIds}

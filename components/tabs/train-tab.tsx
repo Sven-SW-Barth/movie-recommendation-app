@@ -8,12 +8,14 @@ import { Button } from '@/components/ui/button'
 import { Heart, X, RotateCcw, CheckCircle2 } from 'lucide-react'
 
 export function TrainTab({
+  moodId,
   moodName,
   stats,
   swipedMovieIds,
   onSwipe,
   onReset,
 }: {
+  moodId: string
   moodName: string
   stats: Record<string, number>
   swipedMovieIds: string[]
@@ -21,9 +23,16 @@ export function TrainTab({
   onReset: () => void
 }) {
   const swiped = useMemo(() => new Set(swipedMovieIds), [swipedMovieIds])
+
+  // Freeze the queue order per mood session. Recomputing on every `stats`
+  // change would reshuffle the list mid-swipe (the ranking uses random noise),
+  // making the peeked "next" card flash to a different film. We rank once from
+  // the current profile and only re-rank when the mood itself changes.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const orderedQueue = useMemo(() => buildTrainingQueue(stats), [moodId])
   const deck = useMemo(
-    () => buildTrainingQueue(stats).filter((m) => !swiped.has(m.id)),
-    [stats, swiped],
+    () => orderedQueue.filter((m) => !swiped.has(m.id)),
+    [orderedQueue, swiped],
   )
   const [buttonExit, setButtonExit] = useState(false)
 
