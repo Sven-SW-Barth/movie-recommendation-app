@@ -169,8 +169,8 @@ function clamp(n: number): number {
 // The active mood is a vector the algorithm nudges toward (Like) or away from
 // (Pass) the movie, but only for traits the movie expresses strongly enough to
 // be informative. Neutral traits are ignored to prevent profile dilution.
-export const LIKE_LEARNING_RATE = 0.15 // how fast the profile adapts to a Like
-export const PASS_LEARNING_RATE = 0.08 // how fast the profile adapts to a Pass
+export const LIKE_LEARNING_RATE = 0.06 // how fast the profile adapts to a Like
+export const PASS_LEARNING_RATE = 0.03 // how fast the profile adapts to a Pass
 export const HIGH_THRESHOLD = 70.0 // value at/above which a trait is dominant
 export const LOW_THRESHOLD = 20.0 // value at/below which a trait is lacking
 
