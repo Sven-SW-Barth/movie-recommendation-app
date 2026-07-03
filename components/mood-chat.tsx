@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport, type UIMessage } from 'ai'
 import { toast } from 'sonner'
-import { ArrowUp, Sparkles } from 'lucide-react'
+import { ArrowUp, Sparkles, SlidersHorizontal } from 'lucide-react'
 import { createMood } from '@/app/actions/app'
+import { neutralStats } from '@/lib/catalog'
 import { MoodIcon } from '@/components/mood-icon'
 import { StatsBars } from '@/components/stats-bars'
 import { Button } from '@/components/ui/button'
@@ -91,6 +92,22 @@ export function MoodChat({
     setInput('')
   }
 
+  async function handleCreateBasic() {
+    if (creating) return
+    setCreating(true)
+    try {
+      const moodId = await createMood({
+        name: 'Basic',
+        icon: 'sparkles',
+        weights: neutralStats(),
+      })
+      onCreated(moodId)
+    } catch {
+      toast.error('Could not create that mood. Try again.')
+      setCreating(false)
+    }
+  }
+
   async function handleCreate() {
     if (!proposal) return
     setCreating(true)
@@ -134,6 +151,31 @@ export function MoodChat({
                 {s}
               </button>
             ))}
+
+            <div className="mt-3 flex items-center gap-3">
+              <span className="h-px flex-1 bg-border" />
+              <span className="eyebrow">Or skip the chat</span>
+              <span className="h-px flex-1 bg-border" />
+            </div>
+
+            <button
+              type="button"
+              onClick={handleCreateBasic}
+              disabled={creating}
+              className="mt-1 flex items-center gap-3 border-2 border-foreground px-3 py-3 text-left transition-colors hover:bg-accent disabled:opacity-60"
+            >
+              <span className="flex size-9 shrink-0 items-center justify-center border border-foreground">
+                <SlidersHorizontal className="size-4" aria-hidden="true" />
+              </span>
+              <span className="min-w-0">
+                <span className="block font-display text-base font-bold leading-tight">
+                  {creating ? 'Creating…' : 'Basic mood'}
+                </span>
+                <span className="block text-sm leading-snug text-muted-foreground">
+                  Start balanced — every trait at 50 — and train it by swiping.
+                </span>
+              </span>
+            </button>
           </div>
         )}
 
