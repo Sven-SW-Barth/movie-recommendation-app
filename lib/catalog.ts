@@ -161,27 +161,35 @@ export function getCategory(id: string): Category | undefined {
   return categories.find((c) => c.id === id)
 }
 
-// How much a single like/dislike nudges a category score.
-export const STEP = 0.5
-
 function clamp(n: number): number {
   return Math.max(0, Math.min(100, n))
 }
 
-// A movie "expresses" a category when its attribute is at or above this
-// midpoint (i.e. a mood_score of 5/10 or higher). Those are the categories a
-// swipe acts on.
-export const EXPRESS_THRESHOLD = 50
+// --- Gradient matching algorithm hyperparameters ---------------------------
+// The active mood is a vector the algorithm nudges toward (Like) or away from
+// (Pass) the movie, but only for traits the movie expresses strongly enough to
+// be informative. Neutral traits are ignored to prevent profile dilution.
+export const LIKE_LEARNING_RATE = 0.15 // how fast the profile adapts to a Like
+export const PASS_LEARNING_RATE = 0.08 // how fast the profile adapts to a Pass
+export const HIGH_THRESHOLD = 70.0 // value at/above which a trait is dominant
+export const LOW_THRESHOLD = 20.0 // value at/below which a trait is lacking
 
 /**
- * Apply a swipe to a stats profile and return the updated profile.
+ * Apply a swipe to a mood profile and return the updated profile.
  *
- * The twist: every category the movie EXPRESSES (attribute >= threshold) is
- * nudged by exactly STEP (0.5). A like pushes those categories up, a dislike
- * pushes them down. Categories the movie does not express are left untouched,
- * so swiping a loud, funny movie only moves the stats that movie is actually
- * about. Scores are clamped to 0-100. Only the active mood's profile is ever
- * passed in here.
+ * For every attribute we take `difference = movie_value - user_value` and:
+ *
+ *   LIKE  — only dominant movie traits (>= HIGH_THRESHOLD) pull the profile
+ *           toward the movie: user += LIKE_LEARNING_RATE * difference.
+ *
+ *   PASS  — dominant traits (>= HIGH_THRESHOLD, "too intense") AND lacking
+ *           traits (<= LOW_THRESHOLD, "missing something") push the profile
+ *           away: user -= PASS_LEARNING_RATE * difference. Because `difference`
+ *           is negative for lacking traits, subtracting raises the user value.
+ *
+ * Neutral traits (strictly between the thresholds) are ignored for both
+ * actions. Every updated value is clamped to [0, 100]. Only the active mood's
+ * profile is ever passed in here.
  */
 export function applySwipe(
   stats: Record<string, number>,
@@ -189,12 +197,21 @@ export function applySwipe(
   liked: boolean,
 ): Record<string, number> {
   const next: Record<string, number> = { ...stats }
-  const direction = liked ? 1 : -1
   for (const c of categories) {
-    const attr = movie.attributes[c.id] ?? 0
-    if (attr >= EXPRESS_THRESHOLD) {
-      const current = next[c.id] ?? NEUTRAL_SCORE
-      next[c.id] = clamp(current + direction * STEP)
+    const userValue = next[c.id] ?? NEUTRAL_SCORE
+    const movieValue = movie.attributes[c.id] ?? 0
+    const difference = movieValue - userValue
+
+    if (liked) {
+      // SCENARIO A: only adapt toward dominant traits.
+      if (movieValue >= HIGH_THRESHOLD) {
+        next[c.id] = clamp(userValue + LIKE_LEARNING_RATE * difference)
+      }
+    } else {
+      // SCENARIO B: move away from too-intense or too-lacking traits.
+      if (movieValue >= HIGH_THRESHOLD || movieValue <= LOW_THRESHOLD) {
+        next[c.id] = clamp(userValue - PASS_LEARNING_RATE * difference)
+      }
     }
   }
   return next
