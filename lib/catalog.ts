@@ -234,3 +234,106 @@ export function matchScore(
   const meanDiff = total / categories.length
   return 100 - meanDiff
 }
+
+// --- Training queue (exploit / explore) ------------------------------------
+// The Train feed balances showing what the user already likes (exploitation)
+// against films that probe their boundaries and resolve uncertainty
+// (exploration). Each movie earns a TrainingScore in [0,1] from three parts.
+export const TRAIN_MATCH_WEIGHT = 0.6
+export const TRAIN_POLARITY_WEIGHT = 0.2
+export const TRAIN_UNCERTAINTY_WEIGHT = 0.2
+
+// Boundaries used by the polarity component.
+const POLARITY_USER_LOW = 30.0
+const POLARITY_MOVIE_HIGH = 70.0
+
+// Only the strongest scorers get shuffled, and only a little.
+const TRAIN_SHUFFLE_TOP = 30
+const TRAIN_NOISE = 0.02
+
+// Largest possible Euclidean distance across the attribute space (each axis 0-100).
+const MAX_DISTANCE = Math.sqrt(categories.length) * 100
+
+type ScoredMovie = { movie: Movie; score: number }
+
+/** Raw (un-normalized) scores for one movie against the active mood. */
+function rawTrainingScores(
+  userMood: Record<string, number>,
+  movie: Movie,
+): { match: number; polarity: number; uncertainty: number } {
+  let sumSquares = 0
+  let polarity = 0
+  let uncertainty = 0
+
+  for (const c of categories) {
+    const user = userMood[c.id] ?? NEUTRAL_SCORE
+    const value = movie.attributes[c.id] ?? NEUTRAL_SCORE
+
+    // A: match — Euclidean distance (accumulate squared differences).
+    const diff = user - value
+    sumSquares += diff * diff
+
+    // B: polarity — user cold on a trait the movie leans hard into.
+    if (user < POLARITY_USER_LOW && value > POLARITY_MOVIE_HIGH) {
+      polarity += Math.abs(value - user)
+    }
+
+    // C: uncertainty — neutral user (near 50) × extreme movie trait (far from 50).
+    const neutrality = 50.0 - Math.abs(user - 50.0)
+    const extremity = Math.abs(value - 50.0)
+    uncertainty += neutrality * extremity
+  }
+
+  const distance = Math.sqrt(sumSquares)
+  const match = 1 - distance / MAX_DISTANCE // 1 = perfect match, 0 = farthest
+
+  return { match, polarity, uncertainty }
+}
+
+/**
+ * Build an optimized Train queue for the active mood.
+ *
+ * TrainingScore = 0.60*Match + 0.20*Polarity + 0.20*Uncertainty, where the
+ * polarity and uncertainty totals are normalized against the strongest
+ * candidate so each spans [0,1]. The list is sorted descending, then the top
+ * 30 get a touch of random noise and a re-sort so the feed never feels rigid.
+ */
+export function buildTrainingQueue(
+  userMood: Record<string, number>,
+  movieList: Movie[] = movies,
+): Movie[] {
+  if (movieList.length === 0) return []
+
+  const raw = movieList.map((movie) => ({
+    movie,
+    ...rawTrainingScores(userMood, movie),
+  }))
+
+  // Normalize polarity + uncertainty relative to the best candidate so both
+  // exploration components use the full 0-1 range (match is already 0-1).
+  const maxPolarity = Math.max(...raw.map((r) => r.polarity), 1e-9)
+  const maxUncertainty = Math.max(...raw.map((r) => r.uncertainty), 1e-9)
+
+  const scored: ScoredMovie[] = raw.map((r) => ({
+    movie: r.movie,
+    score:
+      TRAIN_MATCH_WEIGHT * r.match +
+      TRAIN_POLARITY_WEIGHT * (r.polarity / maxPolarity) +
+      TRAIN_UNCERTAINTY_WEIGHT * (r.uncertainty / maxUncertainty),
+  }))
+
+  scored.sort((a, b) => b.score - a.score)
+
+  // Inject a little noise into the top slice and re-sort just that slice, so
+  // the strongest picks stay on top but their exact order stays fresh.
+  const head = scored.slice(0, TRAIN_SHUFFLE_TOP)
+  const tail = scored.slice(TRAIN_SHUFFLE_TOP)
+  head.sort(
+    (a, b) =>
+      b.score +
+      (Math.random() - 0.5) * TRAIN_NOISE -
+      (a.score + (Math.random() - 0.5) * TRAIN_NOISE),
+  )
+
+  return [...head, ...tail].map((s) => s.movie)
+}

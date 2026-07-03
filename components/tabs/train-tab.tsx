@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { movies } from '@/lib/catalog'
+import { buildTrainingQueue } from '@/lib/catalog'
 import { SwipeCard } from '@/components/swipe-card'
 import { StatsBars } from '@/components/stats-bars'
 import { Button } from '@/components/ui/button'
@@ -22,8 +22,8 @@ export function TrainTab({
 }) {
   const swiped = useMemo(() => new Set(swipedMovieIds), [swipedMovieIds])
   const deck = useMemo(
-    () => movies.filter((m) => !swiped.has(m.id)),
-    [swiped],
+    () => buildTrainingQueue(stats).filter((m) => !swiped.has(m.id)),
+    [stats, swiped],
   )
   const [buttonExit, setButtonExit] = useState(false)
 
