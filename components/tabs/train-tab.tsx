@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { buildTrainingQueue } from '@/lib/catalog'
 import { SwipeCard } from '@/components/swipe-card'
 import { StatsBars } from '@/components/stats-bars'
@@ -24,12 +24,22 @@ export function TrainTab({
 }) {
   const swiped = useMemo(() => new Set(swipedMovieIds), [swipedMovieIds])
 
+  // The queue's top-slice shuffle uses Math.random, so it MUST stay off during
+  // SSR and the first client render or hydration mismatches. We flip it on
+  // after mount.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
   // Freeze the queue order per mood session. Recomputing on every `stats`
-  // change would reshuffle the list mid-swipe (the ranking uses random noise),
-  // making the peeked "next" card flash to a different film. We rank once from
-  // the current profile and only re-rank when the mood itself changes.
+  // change would reshuffle the list mid-swipe, making the peeked "next" card
+  // flash to a different film. We rank once from the current profile and only
+  // re-rank when the mood changes (or once after mount to apply the shuffle).
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const orderedQueue = useMemo(() => buildTrainingQueue(stats), [moodId])
+  const orderedQueue = useMemo(
+    () => buildTrainingQueue(stats, undefined, { shuffle: mounted }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [moodId, mounted],
+  )
   const deck = useMemo(
     () => orderedQueue.filter((m) => !swiped.has(m.id)),
     [orderedQueue, swiped],

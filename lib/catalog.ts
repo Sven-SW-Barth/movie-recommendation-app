@@ -297,10 +297,15 @@ function rawTrainingScores(
  * polarity and uncertainty totals are normalized against the strongest
  * candidate so each spans [0,1]. The list is sorted descending, then the top
  * 30 get a touch of random noise and a re-sort so the feed never feels rigid.
+ *
+ * `shuffle` MUST stay false for SSR and the first client render (the noise uses
+ * Math.random, which would otherwise cause a hydration mismatch). Enable it
+ * only after mount.
  */
 export function buildTrainingQueue(
   userMood: Record<string, number>,
   movieList: Movie[] = movies,
+  { shuffle = false }: { shuffle?: boolean } = {},
 ): Movie[] {
   if (movieList.length === 0) return []
 
@@ -323,6 +328,10 @@ export function buildTrainingQueue(
   }))
 
   scored.sort((a, b) => b.score - a.score)
+
+  if (!shuffle) {
+    return scored.map((s) => s.movie)
+  }
 
   // Inject a little noise into the top slice and re-sort just that slice, so
   // the strongest picks stay on top but their exact order stays fresh.
